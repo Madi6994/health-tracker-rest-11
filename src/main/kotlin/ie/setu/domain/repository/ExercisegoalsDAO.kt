@@ -6,7 +6,8 @@ import ie.setu.domain.db.Exercise_goal
 import ie.setu.domain.db.Step_counter
 import ie.setu.utils.mapToExercise_goal
 import ie.setu.utils.mapToStep_counter
-import org.jetbrains.exposed.sql.selectAll
+import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class ExercisegoalsDAO {
@@ -18,5 +19,58 @@ class ExercisegoalsDAO {
                 exercisegoalsList.add(mapToExercise_goal(it)) }
         }
         return exercisegoalsList
+    }
+
+    fun findByexerciseId(id: Int): Exercise_goals?{
+        return transaction {
+            Exercise_goal
+                .select() { Exercise_goal.id eq id}
+                .map{ mapToExercise_goal(it) }
+                .firstOrNull()
+        }
+    }
+
+    fun findByUserId(userId: Int): List<Exercise_goals>{
+        return transaction {
+            Exercise_goal
+                .select {Exercise_goal.userId eq userId}
+                .map { mapToExercise_goal(it) }
+        }
+    }
+
+    fun save(exercact: Exercise_goals){
+        transaction {
+            Exercise_goal.insert {
+                it[id] = exercact.id
+                it[calories_to_burn] = exercact.Calories_To_Burn
+                it[steps] = exercact.Steps
+                it[date] = exercact.Date
+                it[userId] = exercact.userId
+            }
+        }
+    }
+
+    fun updateByexerciseId(exercId: Int, exercDTO: Exercise_goals){
+        transaction {
+            Exercise_goal.update ({
+                Exercise_goal.id eq exercId}) {
+                it[calories_to_burn] = exercDTO.Calories_To_Burn
+                it[steps] = exercDTO.Steps
+                it[date] = exercDTO.Date
+                it[userId] = exercDTO.userId
+            }
+        }
+    }
+
+    fun deleteByexerciseId (exercId: Int): Int{
+        return transaction{
+            Exercise_goal.deleteWhere { Exercise_goal.id eq exercId }
+        }
+    }
+
+    fun deleteByUserId (userId: Int): Int{
+        return transaction{
+            Exercise_goal.deleteWhere { Exercise_goal.userId eq userId }
+        }
     }
 }
