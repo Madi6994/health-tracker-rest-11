@@ -6,10 +6,8 @@ import ie.setu.domain.db.Activities
 import ie.setu.domain.db.Step_counter
 import ie.setu.utils.mapToActivity
 import ie.setu.utils.mapToStep_counter
+import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
-import org.jetbrains.exposed.sql.insert
-import org.jetbrains.exposed.sql.select
-import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class StepcounterDAO {
@@ -52,5 +50,26 @@ class StepcounterDAO {
         }
     }
 
+    fun updateByStepId(stepId: Int, stepDTO: Step_Counter){
+        transaction {
+            Step_counter.update ({
+                Step_counter.id eq stepId}) {
+                it[steps] = stepDTO.Daily_Steps
+                it[userId] = stepDTO.UserID
+            }
+        }
+    }
 
+    fun deleteByStepId (stepId: Int): Int{
+        return transaction{
+            Step_counter.deleteWhere { Step_counter.id eq stepId }
+        }
+    }
+
+
+    fun deleteByUserId (userId: Int): Int{
+        return transaction{
+            Step_counter.deleteWhere { Step_counter.userId eq userId }
+        }
+    }
 }
