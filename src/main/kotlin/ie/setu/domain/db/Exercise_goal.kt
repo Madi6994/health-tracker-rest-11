@@ -12,20 +12,6 @@ object Exercise_goal:Table("ExerciseActivity") {
     val steps = integer("Steps")
     val date = integer("Date")
     val userId = integer("user_id").references(Users.id, onDelete = ReferenceOption.CASCADE)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
