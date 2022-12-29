@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-activity-overview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/Exercise_goals.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/Health_Coaching.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/Step_Counter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/Tracking_Water_Intake.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Exercise _goals.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Health_Coaching.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/HeartBeat.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/HeartBeat.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Object" />
-        <option value="Kotlin Class" />
         <option value="HTML File" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -186,7 +185,7 @@
       <workItem from="1669084188456" duration="432000" />
       <workItem from="1669085062169" duration="79000" />
       <workItem from="1669842206060" duration="1133000" />
-      <workItem from="1672260927079" duration="13860000" />
+      <workItem from="1672260927079" duration="19648000" />
     </task>
     <task id="LOCAL-00001" summary="first lab of healthtracker rest (before exercises)">
       <created>1655212794272</created>
@@ -279,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672276163571</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="...">
+      <created>1672280723016</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672280723016</updated>
+    </task>
+    <task id="LOCAL-00015" summary="...">
+      <created>1672282818319</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672282818319</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
