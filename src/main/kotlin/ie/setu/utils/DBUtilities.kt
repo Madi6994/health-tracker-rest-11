@@ -1,13 +1,7 @@
 package ie.setu.utils
 
-import ie.setu.domain.Activity
-import ie.setu.domain.HeartBeat
-import ie.setu.domain.Step_Counter
-import ie.setu.domain.User
-import ie.setu.domain.db.Activities
-import ie.setu.domain.db.HeartRate
-import ie.setu.domain.db.Step_counter
-import ie.setu.domain.db.Users
+import ie.setu.domain.*
+import ie.setu.domain.db.*
 import org.jetbrains.exposed.sql.ResultRow
 
 fun mapToUser(it: ResultRow) = User(
@@ -38,6 +32,12 @@ fun mapToStep_counter(it: ResultRow) = Step_Counter(
     UserID = it[Step_counter.userId]
 )
 
-
+fun mapToExercise_goal(it: ResultRow) = Exercise_goals(
+    id = it[Exercise_goal.id],
+    Calories_To_Burn = it[Exercise_goal.calories_to_burn],
+    Steps = it[Exercise_goal.steps],
+    Date = it[Exercise_goal.date],
+    userId = it[Exercise_goal.userId]
+)
 
 
