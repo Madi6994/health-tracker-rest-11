@@ -47,3 +47,9 @@ fun mapToHealthcoaching(it: ResultRow) = Health_Coaching(
     macro_percentages = it[Health_coaching.macro_percentage],
 )
 
+fun mapToTrackingwaterintake(it: ResultRow) = Tracking_Water_Intake(
+    ID = it[Tracking_water_intake.id],
+    Glass_of_Water = it[Tracking_water_intake.glass_of_water],
+    DateTime = it[Tracking_water_intake.datetime],
+    UserID = it[Tracking_water_intake.userId],
+)
