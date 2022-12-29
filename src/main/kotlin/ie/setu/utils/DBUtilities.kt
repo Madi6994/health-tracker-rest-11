@@ -40,4 +40,10 @@ fun mapToExercise_goal(it: ResultRow) = Exercise_goals(
     userId = it[Exercise_goal.userId]
 )
 
+fun mapToHealthcoaching(it: ResultRow) = Health_Coaching(
+    ID = it[Health_coaching.id],
+    Protein_Intake = it[Health_coaching.protein_intake],
+    UserID = it[Health_coaching.userId],
+    macro_percentages = it[Health_coaching.macro_percentage],
+)
 
