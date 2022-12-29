@@ -14,11 +14,11 @@ class DbConfig{
         val logger = KotlinLogging.logger {}
         logger.info{"Starting DB Connection..."}
 
-        val PGUSER = "kuwsemue"
-        val PGPASSWORD = "zWmiFoHcieiOZIPOf-bIxWDnkzYZRl91"
-        val PGHOST = "lucky.db.elephantsql.com"
+        val PGUSER = "wkwlpzoi"
+        val PGPASSWORD = "3kNRqE2FUAvP-HvGPLtLiCKW1HdMVjE-"
+        val PGHOST = "mel.db.elephantsql.com"
         val PGPORT = "5432"
-        val PGDATABASE = "kuwsemue"
+        val PGDATABASE = "wkwlpzoi"
 
         //url format should be jdbc:postgresql://host:port/database
         val url = "jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE"
