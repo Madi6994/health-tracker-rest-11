@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="...">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" afterDir="false" />
-    </list>
+    <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,22 +52,7 @@
       <recent name="ie.setu.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HealthTrackerControllerTest (5)">
-    <configuration name="HealthTrackerControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.HealthTrackerControllerTest">
     <configuration name="HealthTrackerControllerTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
@@ -131,6 +113,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HealthTrackerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest-3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="delpoy-heroku" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -158,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HealthTrackerControllerTest" />
         <item itemvalue="JUnit.HealthTrackerControllerTest (5)" />
         <item itemvalue="JUnit.HealthTrackerControllerTest (4)" />
         <item itemvalue="JUnit.HealthTrackerControllerTest (3)" />
         <item itemvalue="JUnit.HealthTrackerControllerTest (2)" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +182,7 @@
       <workItem from="1669084188456" duration="432000" />
       <workItem from="1669085062169" duration="79000" />
       <workItem from="1669842206060" duration="1133000" />
-      <workItem from="1672260927079" duration="8606000" />
+      <workItem from="1672260927079" duration="8926000" />
     </task>
     <task id="LOCAL-00001" summary="first lab of healthtracker rest (before exercises)">
       <created>1655212794272</created>
@@ -264,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672273570565</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="...">
+      <created>1672274756229</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672274756229</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
