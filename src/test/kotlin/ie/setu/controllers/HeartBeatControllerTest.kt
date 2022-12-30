@@ -2,6 +2,7 @@ package ie.setu.controllers
 
 import ie.setu.config.DbConfig
 import ie.setu.domain.HeartBeat
+import ie.setu.domain.Step_Counter
 import ie.setu.domain.User
 import ie.setu.domain.db.Activities
 import ie.setu.helpers.*
@@ -132,7 +133,7 @@ class HeartBeatControllerTest {
             addHeartBeat(heartbeatid, heartbeatrate, heartbeatuserid )
 
             //Assert - retrieve the added user from the database and verify return code
-            val retrieveResponse = retrieveHeartBeatById(activityid)
+            val retrieveResponse = retrieveHeartBeatById(heartbeatid)
             assertEquals(200, retrieveResponse.status)
 
             //After - restore the db to previous state by deleting the added user
@@ -159,4 +160,30 @@ class HeartBeatControllerTest {
         return Unirest.get(origin + "/api/heartbeat/${id}").asString()
     }
 
+
+
+
+
+    @Test
+    fun `add a Activity with correct details returns a 201 response`() {
+
+        //Arrange & Act & Assert
+        //    add the user and verify return code (using fixture data)
+        val addResponse = addHeartBeat(
+            heartbeatid, heartbeatrate, heartbeatuserid)
+        assertEquals(201, addResponse.status)
+
+        //Assert - retrieve the added user from the database and verify return code
+        val retrieveResponse= retrieveHeartBeatById(stepcounterid)
+        assertEquals(200, retrieveResponse.status)
+
+        //Assert - verify the contents of the retrieved user
+        val retrievedheartbeat : HeartBeat = jsonToObject(addResponse.body.toString())
+        assertEquals(heartbeatrate, retrievedheartbeat.rate)
+        assertEquals(heartbeatid, retrievedheartbeat.id)
+
+        //After - restore the db to previous state by deleting the added user
+        val deleteResponse = deleteHeartBeat(retrievedheartbeat.id)
+        assertEquals(204, deleteResponse.status)
+    }
 }

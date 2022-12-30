@@ -81,6 +81,8 @@ val updatedheartbeatuserid = 2
 
 
 //Step_Counter
+val nonExistingdailysteps = 45
+
 val stepcounterid = 3
 val stepcounterdailysteps= 95
 val stepcounteruserid = 5
