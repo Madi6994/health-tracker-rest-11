@@ -139,10 +139,10 @@ val  Calories = arrayListOf<Exercise_goals>(
 val  Coaching = arrayListOf<Health_Coaching>(
 
     Health_Coaching(ID = 1, Protein_Intake = 98, macro_percentages = 55, UserID = 1),
-    Health_Coaching(ID = 2, Protein_Intake = 98, macro_percentages = 55, UserID = 6),
-    Health_Coaching(ID = 3, Protein_Intake = 98, macro_percentages = 55, UserID = 2),
-    Health_Coaching(ID = 4, Protein_Intake = 98, macro_percentages = 55, UserID = 7),
-    Health_Coaching(ID = 5, Protein_Intake = 98, macro_percentages = 55, UserID = 9)
+    Health_Coaching(ID = 2, Protein_Intake = 99, macro_percentages = 56, UserID = 2),
+    Health_Coaching(ID = 3, Protein_Intake = 100, macro_percentages = 57, UserID = 3),
+    Health_Coaching(ID = 4, Protein_Intake = 101, macro_percentages = 58, UserID = 4),
+    Health_Coaching(ID = 5, Protein_Intake = 102, macro_percentages = 59, UserID = 5)
 )
 
 

@@ -43,7 +43,7 @@ class HealthcoachingControllerTest {
 
         @Test
         fun `deleting a Activity when it exists, returns a 204 response`() {
-            var id =1
+            var id =5
             //Arrange - add the user that we plan to do a delete on
             val addedResponse = addHealth_Coaching(
                 coachingid, coachingproteinintake, coachingmacropercentage, coachinguserid

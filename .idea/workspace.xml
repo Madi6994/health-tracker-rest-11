@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Exercise_goal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Exercise_goal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ExercisegoalsDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ExercisegoalsDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/ExercisegoalsDAOTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/ExercisegoalsDAOTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,82 +58,83 @@
       <recent name="ie.setu.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExercisegoalsDAOTest">
-    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting a non-existant activity (by id) in table results in no deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HealthcoachingControllerTest.add a Activity with correct details returns a 201 response">
+    <configuration name="HealthcoachingControllerTest$ReadUsers.get user by id when Health_coaching does not exist returns 404 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
-      <option name="METHOD_NAME" value="deleting a non-existant activity (by id) in table results in no deletion()" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthcoachingControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthcoachingControllerTest$ReadUsers" />
+      <option name="METHOD_NAME" value="get user by id when Health_coaching does not exist returns 404 response" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting activities when 1 or more exist for user id results in deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthcoachingControllerTest$ReadUsers.get user by id when user does not exist returns 404 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
-      <option name="METHOD_NAME" value="deleting activities when 1 or more exist for user id results in deletion" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthcoachingControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthcoachingControllerTest$ReadUsers" />
+      <option name="METHOD_NAME" value="get user by id when user does not exist returns 404 response" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting activities when none exist for user id results in no deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthcoachingControllerTest$ReadUsers.getting a Activity by email when email exists, returns a 200 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
-      <option name="METHOD_NAME" value="deleting activities when none exist for user id results in no deletion" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthcoachingControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthcoachingControllerTest$ReadUsers" />
+      <option name="METHOD_NAME" value="getting a Activity by email when email exists, returns a 200 response" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting an existing activity (by id) in table results in record being deleted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthcoachingControllerTest$ReadUsers.getting a user by id when id exists, returns a 200 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
-      <option name="METHOD_NAME" value="deleting an existing activity (by id) in table results in record being deleted()" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthcoachingControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthcoachingControllerTest$ReadUsers" />
+      <option name="METHOD_NAME" value="getting a user by id when id exists, returns a 200 response" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExercisegoalsDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthcoachingControllerTest.add a Activity with correct details returns a 201 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthcoachingControllerTest" />
+      <option name="METHOD_NAME" value="add a Activity with correct details returns a 201 response" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExercisegoalsDAOTest" />
-        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting a non-existant activity (by id) in table results in no deletion" />
-        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting an existing activity (by id) in table results in record being deleted" />
-        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting activities when none exist for user id results in no deletion" />
-        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting activities when 1 or more exist for user id results in deletion" />
+        <item itemvalue="JUnit.HealthcoachingControllerTest.add a Activity with correct details returns a 201 response" />
+        <item itemvalue="JUnit.HealthcoachingControllerTest$ReadUsers.getting a Activity by email when email exists, returns a 200 response" />
+        <item itemvalue="JUnit.HealthcoachingControllerTest$ReadUsers.getting a user by id when id exists, returns a 200 response" />
+        <item itemvalue="JUnit.HealthcoachingControllerTest$ReadUsers.get user by id when user does not exist returns 404 response" />
+        <item itemvalue="JUnit.HealthcoachingControllerTest$ReadUsers.get user by id when Health_coaching does not exist returns 404 response" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +196,7 @@
       <workItem from="1672260927079" duration="13860000" />
       <workItem from="1672352067549" duration="7916000" />
       <workItem from="1672360295795" duration="6038000" />
-      <workItem from="1672367570455" duration="29465000" />
+      <workItem from="1672367570455" duration="30436000" />
     </task>
     <task id="LOCAL-00001" summary="first lab of healthtracker rest (before exercises)">
       <created>1655212794272</created>
@@ -507,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672402954124</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="...">
+      <created>1672405529596</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1672405529596</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,6 +544,39 @@
     <MESSAGE value="new Feature" />
     <MESSAGE value="..." />
     <option name="LAST_COMMIT_MESSAGE" value="..." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
+          <line>44</line>
+          <properties class="ie.setu.controllers.HealthcoachingControllerTest.DeleteActivity" method="deleting a Activity when it exists, returns a 204 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
+          <line>60</line>
+          <properties class="ie.setu.controllers.HealthcoachingControllerTest.DeleteActivity" method="updating a user when it doesn't exist, returns a 404 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
+          <line>109</line>
+          <properties class="ie.setu.controllers.HealthcoachingControllerTest.ReadUsers" method="getting a user by id when id exists, returns a 200 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1655483787936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
