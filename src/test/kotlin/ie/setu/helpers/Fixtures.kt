@@ -1,14 +1,12 @@
 package ie.setu.helpers
 
-import ie.setu.domain.Activity
-import ie.setu.domain.Exercise_goals
-import ie.setu.domain.HeartBeat
-import ie.setu.domain.User
+import ie.setu.domain.*
 import ie.setu.domain.db.Activities
 import ie.setu.domain.db.Exercise_goal
 import ie.setu.domain.db.Users
 import ie.setu.domain.repository.ActivityDAO
 import ie.setu.domain.repository.ExercisegoalsDAO
+import ie.setu.domain.repository.HealthcoachingDAO
 import ie.setu.domain.repository.UserDAO
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.joda.time.DateTime
@@ -49,6 +47,15 @@ val  Calories = arrayListOf<Exercise_goals>(
     Exercise_goals(id = 3, Calories_To_Burn = 150, Steps = 85, Date = DateTime.now(), userId = 9)
 )
 
+val  Coaching = arrayListOf<Health_Coaching>(
+
+    Health_Coaching(ID = 1, Protein_Intake = 98, macro_percentages = 55, UserID = 1),
+    Health_Coaching(ID = 2, Protein_Intake = 98, macro_percentages = 55, UserID = 6),
+    Health_Coaching(ID = 3, Protein_Intake = 98, macro_percentages = 55, UserID = 2),
+    Health_Coaching(ID = 4, Protein_Intake = 98, macro_percentages = 55, UserID = 7),
+    Health_Coaching(ID = 5, Protein_Intake = 98, macro_percentages = 55, UserID = 9),
+)
+
 
 fun populateUserTable(): UserDAO {
     SchemaUtils.create(Users)
@@ -76,4 +83,16 @@ fun populateExercise_goalsTable(): ExercisegoalsDAO{
     exercisegoalsDAO.save(Calories.get(3))
     exercisegoalsDAO.save(Calories.get(4))
     return exercisegoalsDAO
+}
+
+
+fun populateHealth_CoachingTable(): HealthcoachingDAO{
+    SchemaUtils.create(Exercise_goal)
+    val healthcoachingDAO = HealthcoachingDAO()
+    healthcoachingDAO.save(Coaching.get(0))
+    healthcoachingDAO.save(Coaching.get(1))
+    healthcoachingDAO.save(Coaching.get(2))
+    healthcoachingDAO.save(Coaching.get(3))
+    healthcoachingDAO.save(Coaching.get(4))
+    return healthcoachingDAO
 }
