@@ -38,15 +38,15 @@ class ExercisegoalsDAO {
         }
     }
 
-    fun save(exercact: Exercise_goals){
+    fun save(exercisegoal: Exercise_goals){
         transaction {
             Exercise_goal.insert {
-                it[id] = exercact.id
-                it[calories_to_burn] = exercact.Calories_To_Burn
-                it[steps] = exercact.Steps
-                it[date] = exercact.Date
-                it[userId] = exercact.userId
-            }
+//                it[id] = exercisegoal.id
+                it[calories_to_burn] = exercisegoal.Calories_To_Burn
+                it[steps] = exercisegoal.Steps
+                it[date] = exercisegoal.Date
+                it[userId] = exercisegoal.userId
+            } get Exercise_goal.id
         }
     }
 

@@ -1,6 +1,7 @@
 package ie.setu.controllers
 
 import ie.setu.config.DbConfig
+import ie.setu.controllers.HealthTrackerController.deleteActivityByActivityId
 import ie.setu.domain.Activity
 import ie.setu.domain.User
 import ie.setu.domain.db.Activities
@@ -72,7 +73,7 @@ class AvtivityControllerTest {
     inner class ReadUsers {
         @Test
         fun `get all Activities from the database returns 200 or 404 response`() {
-            val response = Unirest.get(origin + "/api/Activities/").asString()
+            val response = Unirest.get(origin + "/api/activities/").asString()
             if (response.status == 200) {
                 val retrievedActivities: ArrayList<Activities> = jsonToObject(response.body.toString())
                 assertNotEquals(0, retrievedActivities.size)
@@ -90,7 +91,7 @@ class AvtivityControllerTest {
             val id = Integer.MIN_VALUE
 
             // Act - attempt to retrieve the non-existent user from the database
-            val retrieveResponse = Unirest.get(origin + "/api/Activities/${id}").asString()
+            val retrieveResponse = Unirest.get(origin + "/api/activities/${id}").asString()
 
             // Assert -  verify return code
             assertEquals(404, retrieveResponse.status)
@@ -100,7 +101,7 @@ class AvtivityControllerTest {
         fun `get user by email when user does not exist returns 404 response`() {
             // Arrange & Act - attempt to retrieve the non-existent user from the database
 
-            val retrieveResponse = Unirest.get(origin + "/api/Activities/discription/${nonExistingdiscription}").asString()
+            val retrieveResponse = Unirest.get(origin + "/api/activities/discription/${nonExistingdiscription}").asString()
             // Assert -  verify return code
             assertEquals(404, retrieveResponse.status)
         }
@@ -141,17 +142,19 @@ class AvtivityControllerTest {
     }
 
     private fun deleteActivity (id: Int): HttpResponse<String> {
-        return Unirest.delete(origin + "/api/Activities/$id").asString()
+        return Unirest.delete(origin + "/api/activities/$id").asString()
     }
 
-    private fun addActivity (id:Int ,description: String, duration: Double, calories: Int, started: DateTime, userId: Int): HttpResponse<JsonNode> {
-        return Unirest.post(origin + "/api/Activities")
-            .body("{\"description\":\"$description\", \"duration\":\"$duration\",\"calories\":\"$calories\", \"started\":\"$started\", \"userId\":\"$userId\" }")
+    private fun addActivity (id:Int, description: String, duration: Double, calories: Int, started: DateTime, userid: Int): HttpResponse<JsonNode> {
+        return Unirest.post(origin + "/api/activities")
+            .body("{\"id\":\"$id\",\"description\":\"$description\", \"duration\":\"$duration\",\"calories\":\"$calories\", \"started\":\"$started\", \"userId\":\"$userid\" }")
             .asJson()
     }
 
+
+
     private fun retrieveActivityById(id: Int) : HttpResponse<String> {
-        return Unirest.get(origin + "/api/Activities/${id}").asString()
+        return Unirest.get(origin + "/api/activities/${id}").asString()
     }
 
 
@@ -174,7 +177,6 @@ class AvtivityControllerTest {
         //Assert - verify the contents of the retrieved user
         val retrievedActivity : Activity = jsonToObject(addResponse.body.toString())
         assertEquals(activitydiscription, retrievedActivity.description)
-        assertEquals(activityid, retrievedActivity.id)
 
         //After - restore the db to previous state by deleting the added user
         val deleteResponse = deleteActivity(retrievedActivity.id)

@@ -94,6 +94,8 @@ val updatestepcounteruserid = 5
 
 
 //Tracking_Water_Intake
+val nonExistingglassofwater = 7
+
 val waterintakeid = 1
 val waterintakeglassofwater = 5
 val waterintakedatetime = DateTime.now()
@@ -113,13 +115,15 @@ val users = arrayListOf<User>(
     User(name = "Alice Wonderland", email = "alice@wonderland.com", id = 1),
     User(name = "Bob Cat", email = "bob@cat.ie", id = 2),
     User(name = "Mary Contrary", email = "mary@contrary.com", id = 3),
-    User(name = "Carol Singer", email = "carol@singer.com", id = 4)
+    User(name = "Carol Singer", email = "carol@singer.com", id = 4),
+    User(name = "Carl Sier", email = "carl@sier.com", id = 5)
 )
 
 val activities = arrayListOf<Activity>(
     Activity(id = 1, description = "Running", duration = 22.0, calories = 230, started = DateTime.now(), userId = 1),
     Activity(id = 2, description = "Hopping", duration = 10.5, calories = 80, started = DateTime.now(), userId = 1),
-    Activity(id = 3, description = "Walking", duration = 12.0, calories = 120, started = DateTime.now(), userId = 2)
+    Activity(id = 3, description = "Walking", duration = 12.0, calories = 120, started = DateTime.now(), userId = 2),
+    Activity(id = 4, description = "Walking", duration = 18.0, calories = 190, started = DateTime.now(), userId = 4)
 )
 
 

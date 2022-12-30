@@ -165,8 +165,13 @@ object HealthTrackerController {
             .registerModule(JodaModule())
             .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
         val activity = mapper.readValue<Activity>(ctx.body())
-        activityDAO.save(activity)
-        ctx.json(activity)
+        val returnid = activityDAO.save(activity)
+
+        if (returnid != null) {
+            activity.id = returnid
+            ctx.json(activity)
+            ctx.status(201)
+        }
     }
 
     fun getActivitiesByActivityId(ctx: Context) {
@@ -180,8 +185,14 @@ object HealthTrackerController {
     }
 
     fun deleteActivityByActivityId(ctx: Context){
-        activityDAO.deleteByActivityId(ctx.pathParam("activity-id").toInt())
+        if (activityDAO.deleteByActivityId(ctx.pathParam("activity-id").toInt()) != 0) {
+            ctx.status(204)
+        }
+        else{
+            ctx.status(404)
+        }
     }
+
 
     fun deleteActivityByUserId(ctx: Context){
         activityDAO.deleteByUserId(ctx.pathParam("user-id").toInt())

@@ -2,6 +2,7 @@ package ie.setu.domain.repository
 
 import ie.setu.domain.Activity
 import ie.setu.domain.db.Activities
+import ie.setu.domain.db.Users
 import ie.setu.utils.mapToActivity
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -38,15 +39,15 @@ class ActivityDAO {
     }
 
     //Save an activity to the database
-    fun save(activity: Activity){
-        transaction {
+    fun save(activity: Activity) : Int?{
+        return transaction {
             Activities.insert {
                 it[description] = activity.description
                 it[duration] = activity.duration
                 it[started] = activity.started
                 it[calories] = activity.calories
                 it[userId] = activity.userId
-            }
+            } get Activities.id
         }
     }
 
