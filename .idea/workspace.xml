@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Exercise_goal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Exercise_goal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ExercisegoalsDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ExercisegoalsDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/TrackingwaterintakeControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/TrackingwaterintakeControllerTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/ExercisegoalsDAOTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/ExercisegoalsDAOTest.kt" afterDir="false" />
     </list>
@@ -65,54 +61,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ExercisegoalsDAOTest">
-    <configuration name="ActivityDAOTest$DeleteActivities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ActivityDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ActivityDAOTest$DeleteActivities" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ActivityDAOTest$UpdateActivities.updating existing activity in table results in successful update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ActivityDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ActivityDAOTest$UpdateActivities" />
-      <option name="METHOD_NAME" value="updating existing activity in table results in successful update" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ActivityDAOTest$UpdateActivities.updating non-existant activity in table results in no updates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.ActivityDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ActivityDAOTest$UpdateActivities" />
-      <option name="METHOD_NAME" value="updating non-existant activity in table results in no updates" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExercisegoalsDAOTest$CreateActivities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting a non-existant activity (by id) in table results in no deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +70,57 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$CreateActivities" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
+      <option name="METHOD_NAME" value="deleting a non-existant activity (by id) in table results in no deletion()" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting activities when 1 or more exist for user id results in deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest-3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
+      <option name="METHOD_NAME" value="deleting activities when 1 or more exist for user id results in deletion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting activities when none exist for user id results in no deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest-3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
+      <option name="METHOD_NAME" value="deleting activities when none exist for user id results in no deletion" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExercisegoalsDAOTest$DeleteActivities.deleting an existing activity (by id) in table results in record being deleted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest-3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository.ExercisegoalsDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ExercisegoalsDAOTest$DeleteActivities" />
+      <option name="METHOD_NAME" value="deleting an existing activity (by id) in table results in record being deleted()" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,10 +168,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ExercisegoalsDAOTest" />
-        <item itemvalue="JUnit.ExercisegoalsDAOTest$CreateActivities" />
-        <item itemvalue="JUnit.ActivityDAOTest$DeleteActivities" />
-        <item itemvalue="JUnit.ActivityDAOTest$UpdateActivities.updating non-existant activity in table results in no updates" />
-        <item itemvalue="JUnit.ActivityDAOTest$UpdateActivities.updating existing activity in table results in successful update" />
+        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting a non-existant activity (by id) in table results in no deletion" />
+        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting an existing activity (by id) in table results in record being deleted" />
+        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting activities when none exist for user id results in no deletion" />
+        <item itemvalue="JUnit.ExercisegoalsDAOTest$DeleteActivities.deleting activities when 1 or more exist for user id results in deletion" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +197,7 @@
       <workItem from="1672260927079" duration="13860000" />
       <workItem from="1672352067549" duration="7916000" />
       <workItem from="1672360295795" duration="6038000" />
-      <workItem from="1672367570455" duration="26997000" />
+      <workItem from="1672367570455" duration="29465000" />
     </task>
     <task id="LOCAL-00001" summary="first lab of healthtracker rest (before exercises)">
       <created>1655212794272</created>
@@ -502,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672386017828</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="...">
+      <created>1672402954124</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1672402954124</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

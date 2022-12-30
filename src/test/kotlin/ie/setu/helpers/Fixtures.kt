@@ -130,10 +130,10 @@ val activities = arrayListOf<Activity>(
 val  Calories = arrayListOf<Exercise_goals>(
 
     Exercise_goals(id = 1, Calories_To_Burn = 98, Steps = 55, Date = DateTime.now(), userId = 1),
-    Exercise_goals(id = 2, Calories_To_Burn = 95, Steps = 53, Date = DateTime.now(), userId = 6),
-    Exercise_goals(id = 5, Calories_To_Burn = 102, Steps = 60, Date = DateTime.now(), userId = 2),
-    Exercise_goals(id = 4, Calories_To_Burn = 107, Steps = 63, Date = DateTime.now(), userId = 7),
-    Exercise_goals(id = 3, Calories_To_Burn = 150, Steps = 85, Date = DateTime.now(), userId = 9)
+    Exercise_goals(id = 2, Calories_To_Burn = 95, Steps = 53, Date = DateTime.now(), userId = 2),
+    Exercise_goals(id = 3, Calories_To_Burn = 102, Steps = 60, Date = DateTime.now(), userId = 3),
+    Exercise_goals(id = 4, Calories_To_Burn = 107, Steps = 63, Date = DateTime.now(), userId = 4),
+    Exercise_goals(id = 5, Calories_To_Burn = 150, Steps = 85, Date = DateTime.now(), userId = 5)
 )
 
 val  Coaching = arrayListOf<Health_Coaching>(
@@ -185,6 +185,8 @@ fun populateUserTable(): UserDAO {
     userDAO.save(users.get(0))
     userDAO.save(users.get(1))
     userDAO.save(users.get(2))
+    userDAO.save(users.get(3))
+    userDAO.save(users.get(4))
     return userDAO
 }
 fun populateActivityTable(): ActivityDAO {

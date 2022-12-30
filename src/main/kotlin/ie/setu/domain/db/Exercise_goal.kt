@@ -6,7 +6,7 @@ import ie.setu.domain.db.HeartRate.references
 import org.jetbrains.exposed.sql.ReferenceOption
 import org.jetbrains.exposed.sql.Table
 
-object Exercise_goal:Table("exerciseactivity") {
+object Exercise_goal : Table("exerciseactivity") {
     val id = integer("id").autoIncrement().primaryKey()
     val calories_to_burn = integer("Calories_To_Burn")
     val steps = integer("Steps")

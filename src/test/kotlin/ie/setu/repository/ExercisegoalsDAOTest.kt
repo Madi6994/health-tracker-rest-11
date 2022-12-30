@@ -51,11 +51,11 @@ class ExercisegoalsDAOTest {
                 val exercisegoalsDAO = populateExercise_goalsTable()
                 //Act & Assert
                 assertEquals(5, exercisegoalsDAO.getAll().size)
-                assertEquals(calories1, exercisegoalsDAO.findByexerciseId(Calories.get(0).id))
-                assertEquals(calories2, exercisegoalsDAO.findByexerciseId(Calories.get(1).id))
-                assertEquals(calories3, exercisegoalsDAO.findByexerciseId(Calories.get(2).id))
-                assertEquals(calories4, exercisegoalsDAO.findByexerciseId(Calories.get(3).id))
-                assertEquals(calories5, exercisegoalsDAO.findByexerciseId(Calories.get(4).id))
+                assertEquals(calories1, exercisegoalsDAO.findByexerciseId(calories1.id))
+                assertEquals(calories2, exercisegoalsDAO.findByexerciseId(calories2.id))
+                assertEquals(calories3, exercisegoalsDAO.findByexerciseId(calories3.id))
+                assertEquals(calories4, exercisegoalsDAO.findByexerciseId(calories4.id))
+                assertEquals(calories5, exercisegoalsDAO.findByexerciseId(calories5.id))
             }
         }
     }
@@ -83,7 +83,7 @@ class ExercisegoalsDAOTest {
                 val userDAO = populateUserTable()
                 val caloriesDAO = populateExercise_goalsTable()
                 //Act & Assert
-                assertEquals(0, caloriesDAO.findByUserId(5).size)
+                assertEquals(1,caloriesDAO.findByUserId(5).size)
             }
         }
 
@@ -96,10 +96,10 @@ class ExercisegoalsDAOTest {
                 val CaloriesDAO = populateExercise_goalsTable()
                 //Act & Assert
                 assertEquals(calories1, CaloriesDAO.findByUserId(1).get(0))
-                assertEquals(calories2, CaloriesDAO.findByUserId(1).get(1))
-                assertEquals(calories3, CaloriesDAO.findByUserId(2).get(0))
-                assertEquals(calories4, CaloriesDAO.findByUserId(1).get(1))
-                assertEquals(calories5, CaloriesDAO.findByUserId(1).get(0))
+                assertEquals(calories2, CaloriesDAO.findByUserId(2).get(0))
+                assertEquals(calories3, CaloriesDAO.findByUserId(3).get(0))
+                assertEquals(calories4, CaloriesDAO.findByUserId(4).get(0))
+                assertEquals(calories5, CaloriesDAO.findByUserId(5).get(0))
             }
         }
 
@@ -170,7 +170,7 @@ class ExercisegoalsDAOTest {
                 //Act & Assert
                 val caloriesupdate = Exercise_goals(id = 6, Calories_To_Burn = 155, Steps = 65, Date = DateTime.now(), userId = 1)
                 caloriesDAO.updateByexerciseId(6, caloriesupdate)
-                assertEquals(null, caloriesDAO.findByexerciseId(4))
+                assertEquals(null, caloriesDAO.findByexerciseId(9))
                 assertEquals(5, caloriesDAO.getAll().size)
             }
         }
@@ -204,7 +204,7 @@ class ExercisegoalsDAOTest {
                 //Act & Assert
                 assertEquals(5, caloriesDAO.getAll().size)
                 caloriesDAO.deleteByexerciseId(calories3.id)
-                assertEquals(3, caloriesDAO.getAll().size)
+                assertEquals(4, caloriesDAO.getAll().size)
             }
         }
 
@@ -219,7 +219,7 @@ class ExercisegoalsDAOTest {
                 //Act & Assert
                 assertEquals(5, caloriesDAO.getAll().size)
                 caloriesDAO.deleteByUserId(5)
-                assertEquals(5, caloriesDAO.getAll().size)
+                assertEquals(4, caloriesDAO.getAll().size)
             }
         }
 
@@ -236,7 +236,7 @@ class ExercisegoalsDAOTest {
                 //Act & Assert
                 assertEquals(5, caloriesDAO.getAll().size)
                 caloriesDAO.deleteByUserId(1)
-                assertEquals(1, caloriesDAO.getAll().size)
+                assertEquals(4, caloriesDAO.getAll().size)
             }
         }
     }
