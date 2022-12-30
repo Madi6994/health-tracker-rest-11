@@ -9,7 +9,7 @@ import org.joda.time.DateTime
 
 //User
 val nonExistingEmail = "112233445566778testUser@xxxxx.xx"
-val nonExistingdiscription = "112233445566778testUser@xxxxx.xx"
+
 val validName = "Test User 1"
 val validEmail = "testuser1@test.com"
 
@@ -17,6 +17,8 @@ val updatedName = "Updated Name"
 val updatedEmail = "Updated Email"
 
 //Activity
+val nonExistingdiscription = "Running"
+
 val activityid = 1
 val activitydiscription="running"
 val activityduration= 20.0
@@ -35,16 +37,18 @@ val updatedactivityuserid= 4
 
 
 //Exercise Goals
+val nonExistingid = 6
+
 val exerciseid = 1
 val exercisecaloriestoburn= 120
-val exercisesteps= 20.0
+val exercisesteps= 20
 val exercisedatetime = DateTime.now()
 val exerciseuserid= 4
 
 //update
 val updatedexerciseid = 1
 val updatedexercisecaloriestoburn=111
-val updatedexercisesteps= 20.0
+val updatedexercisesteps= 20
 val updatedexercisedatetime = DateTime.now()
 val updatedexerciseuserid= 4
 
