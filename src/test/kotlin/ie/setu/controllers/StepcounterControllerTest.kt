@@ -1,16 +1,13 @@
 package ie.setu.controllers
 
 import ie.setu.config.DbConfig
-import ie.setu.domain.Activity
 import ie.setu.domain.Step_Counter
 import ie.setu.domain.User
-import ie.setu.domain.db.Activities
 import ie.setu.helpers.*
 import ie.setu.utils.jsonToObject
 import kong.unirest.HttpResponse
 import kong.unirest.JsonNode
 import kong.unirest.Unirest
-import org.joda.time.DateTime
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
@@ -27,9 +24,9 @@ class StepcounterControllerTest {
 
 
     //helper function to add a test user to the database
-    private fun updateStepCounter (id: Int, Daily_Steps: Int, UserID: Int): HttpResponse<JsonNode> {
-        return Unirest.patch(origin + "/api/stepcounter/$id")
-            .body("{\"Daily_Steps\":\"$Daily_Steps\", \"UserID\":\"$UserID\"}")
+    private fun updateStepCounter (id: Int, name: Int, email: Int): HttpResponse<JsonNode> {
+        return Unirest.patch(origin + "/api/users/$id")
+            .body("{\"name\":\"$name\", \"email\":\"$email\"}")
             .asJson()
     }
 
@@ -47,7 +44,7 @@ class StepcounterControllerTest {
             var id =2
             //Arrange - add the user that we plan to do a delete on
             val addedResponse = addStepCounter(stepcounterid, stepcounterdailysteps, stepcounteruserid)
-            val addedUser : User = jsonToObject(addedResponse.body.toString())
+            val addedUser : Step_Counter = jsonToObject(addedResponse.body.toString())
 
             //Act & Assert - delete the added user and assert a 204 is returned
             assertEquals(204, deleteStepCounter(id).status)

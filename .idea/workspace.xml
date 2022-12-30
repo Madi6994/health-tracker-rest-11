@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/HeartRate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/HeartRate.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Step_counter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Step_counter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/HeartBeatDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/HeartBeatDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ExercisegoalsControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ExercisegoalsControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HeartBeatControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HeartBeatControllerTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/StepcounterControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/StepcounterControllerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/TrackingwaterintakeControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/TrackingwaterintakeControllerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/HealthcoachingDAOTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/HealthcoachingDAOTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/HeartBeatDAOTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/HeartBeatDAOTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/StepcounterDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/StepcounterDAO.kt" afterDir="false" />
@@ -41,21 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SETU/agile-workspace/healthtracker&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Madi/Desktop/Solutions/Lab 6/health-tracker",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Madi\Desktop\Solutions\Lab 6\health-tracker-rest-3.1\src\main\kotlin\ie\setu\utils" />
@@ -64,80 +70,75 @@
       <recent name="ie.setu.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HealthcoachingDAOTest">
-    <configuration name="HealthcoachingDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HeartBeatControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response">
+    <configuration name="All in health-tracker-rest-3.1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.HealthcoachingDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StepcounterDAOTest$ReadActivities.get activity by user id that exists, results in a correct activitie(s) returned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AvtivityControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker-rest-3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.StepcounterDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.StepcounterDAOTest$ReadActivities" />
-      <option name="METHOD_NAME" value="get activity by user id that exists, results in a correct activitie(s) returned()" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.AvtivityControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.AvtivityControllerTest$DeleteActivity" />
+      <option name="METHOD_NAME" value="deleting a Activity when it exists, returns a 204 response" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StepcounterDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
+    <configuration name="ExercisegoalsControllerTest$DeleteExercise_goals.deleting a Activity when it exists, returns a 204 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.StepcounterDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrackingwaterintakeDAOTest$ReadActivities.get activity by user id that exists, results in a correct activitie(s) returned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.TrackingwaterintakeDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.TrackingwaterintakeDAOTest$ReadActivities" />
-      <option name="METHOD_NAME" value="get activity by user id that exists, results in a correct activitie(s) returned()" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.ExercisegoalsControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.ExercisegoalsControllerTest$DeleteExercise_goals" />
+      <option name="METHOD_NAME" value="deleting a Activity when it exists, returns a 204 response" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrackingwaterintakeDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker-rest-3.1" />
+    <configuration name="HeartBeatControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="PATTERN" value="ie.setu.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.TrackingwaterintakeDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest$DeleteActivity" />
+      <option name="METHOD_NAME" value="deleting a Activity when it exists, returns a 204 response" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StepcounterControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker-rest-3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.StepcounterControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.StepcounterControllerTest$DeleteActivity" />
+      <option name="METHOD_NAME" value="deleting a Activity when it exists, returns a 204 response" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HealthcoachingDAOTest" />
-        <item itemvalue="JUnit.StepcounterDAOTest" />
-        <item itemvalue="JUnit.TrackingwaterintakeDAOTest" />
-        <item itemvalue="JUnit.TrackingwaterintakeDAOTest$ReadActivities.get activity by user id that exists, results in a correct activitie(s) returned" />
-        <item itemvalue="JUnit.StepcounterDAOTest$ReadActivities.get activity by user id that exists, results in a correct activitie(s) returned" />
+        <item itemvalue="JUnit.HeartBeatControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" />
+        <item itemvalue="JUnit.ExercisegoalsControllerTest$DeleteExercise_goals.deleting a Activity when it exists, returns a 204 response" />
+        <item itemvalue="JUnit.All in health-tracker-rest-3.1" />
+        <item itemvalue="JUnit.StepcounterControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" />
+        <item itemvalue="JUnit.AvtivityControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +200,8 @@
       <workItem from="1672260927079" duration="13860000" />
       <workItem from="1672352067549" duration="7916000" />
       <workItem from="1672360295795" duration="6038000" />
-      <workItem from="1672367570455" duration="34497000" />
+      <workItem from="1672367570455" duration="40484000" />
+      <workItem from="1672419974096" duration="1767000" />
     </task>
     <task id="LOCAL-00001" summary="first lab of healthtracker rest (before exercises)">
       <created>1655212794272</created>
@@ -523,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672406460379</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="...">
+      <created>1672410472120</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1672410472120</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +569,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
-          <line>44</line>
+          <line>41</line>
           <properties class="ie.setu.controllers.HealthcoachingControllerTest.DeleteActivity" method="deleting a Activity when it exists, returns a 204 response">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -569,7 +578,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
-          <line>60</line>
+          <line>56</line>
           <properties class="ie.setu.controllers.HealthcoachingControllerTest.DeleteActivity" method="updating a user when it doesn't exist, returns a 404 response">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -578,7 +587,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
-          <line>109</line>
+          <line>105</line>
           <properties class="ie.setu.controllers.HealthcoachingControllerTest.ReadUsers" method="getting a user by id when id exists, returns a 200 response">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -587,7 +596,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HealthcoachingControllerTest.kt</url>
-          <line>124</line>
+          <line>120</line>
           <properties class="ie.setu.controllers.HealthcoachingControllerTest.ReadUsers" method="getting a Activity by email when email exists, returns a 200 response">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -632,7 +641,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/StepcounterControllerTest.kt</url>
-          <line>45</line>
+          <line>42</line>
           <properties class="ie.setu.controllers.StepcounterControllerTest.DeleteActivity" method="deleting a Activity when it exists, returns a 204 response">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -641,7 +650,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/StepcounterControllerTest.kt</url>
-          <line>110</line>
+          <line>107</line>
           <properties class="ie.setu.controllers.StepcounterControllerTest.ReadUsers" method="getting a user by id when id exists, returns a 200 response">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -674,6 +683,84 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt</url>
+          <line>43</line>
+          <properties class="ie.setu.controllers.AvtivityControllerTest.DeleteActivity" method="deleting a Activity when it exists, returns a 204 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt</url>
+          <line>74</line>
+          <properties class="ie.setu.controllers.AvtivityControllerTest.ReadUsers" method="get all Activities from the database returns 200 or 404 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt</url>
+          <line>87</line>
+          <properties class="ie.setu.controllers.AvtivityControllerTest.ReadUsers" method="get user by id when Activities does not exist returns 404 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt</url>
+          <line>125</line>
+          <properties class="ie.setu.controllers.AvtivityControllerTest.ReadUsers" method="getting a Activity by email when email exists, returns a 200 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ExercisegoalsControllerTest.kt</url>
+          <line>111</line>
+          <properties class="ie.setu.controllers.ExercisegoalsControllerTest.ReadUsers" method="getting a user by id when id exists, returns a 200 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ExercisegoalsControllerTest.kt</url>
+          <line>127</line>
+          <properties class="ie.setu.controllers.ExercisegoalsControllerTest.ReadUsers" method="getting a Activity by email when email exists, returns a 200 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ExercisegoalsControllerTest.kt</url>
+          <line>160</line>
+          <properties class="ie.setu.controllers.ExercisegoalsControllerTest" method="add a Activity with correct details returns a 201 response">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt</url>
+          <line>48</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/AvtivityControllerTest.kt</url>
+          <line>51</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/StepcounterControllerTest.kt</url>
+          <line>45</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

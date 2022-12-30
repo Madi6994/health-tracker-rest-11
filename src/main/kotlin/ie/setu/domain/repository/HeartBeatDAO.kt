@@ -17,7 +17,7 @@ class HeartBeatDAO {
     fun getAll(): ArrayList<HeartBeat> {
         val heartbeatList: ArrayList<HeartBeat> = arrayListOf()
         transaction {
-            Step_counter.selectAll().map {
+            HeartRate.selectAll().map {
                 heartbeatList.add(mapToHeartRate(it)) }
         }
         return heartbeatList
@@ -26,7 +26,7 @@ class HeartBeatDAO {
     fun findByheartId(id: Int): HeartBeat?{
         return transaction {
             HeartRate
-                .select() { Step_counter.id eq id}
+                .select() { HeartRate.id eq id}
                 .map{ mapToHeartRate(it) }
                 .firstOrNull()
         }
@@ -36,26 +36,26 @@ class HeartBeatDAO {
     fun findByUserId(userId: Int): List<HeartBeat>{
         return transaction {
             HeartRate
-                .select {Step_counter.userId eq userId}
+                .select {HeartRate.userId eq userId}
                 .map { mapToHeartRate(it) }
         }
     }
 
-    fun save(stepact: HeartBeat){
-        transaction {
+    fun save(stepact: HeartBeat) : Int?{
+        return transaction {
             HeartRate.insert {
-                it[id] = stepact.id
+
                 it[rate] = stepact.rate
                 it[userId] = stepact.userId
 
-            }
+            } get HeartRate.id
         }
     }
 
-    fun updateByheartId(heartId: Int, heartDTO: HeartBeat){
-        transaction {
+    fun updateByheartId(heartId: Int, heartDTO: HeartBeat) : Int {
+        return transaction {
             HeartRate.update ({
-                Step_counter.id eq heartId}) {
+                HeartRate.id eq heartId}) {
                 it[rate] = heartDTO.rate
                 it[userId] = heartDTO.userId
             }

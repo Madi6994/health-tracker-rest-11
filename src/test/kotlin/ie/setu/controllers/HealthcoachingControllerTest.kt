@@ -1,16 +1,13 @@
 package ie.setu.controllers
 
 import ie.setu.config.DbConfig
-import ie.setu.domain.Activity
 import ie.setu.domain.Health_Coaching
 import ie.setu.domain.User
-import ie.setu.domain.db.Activities
 import ie.setu.helpers.*
 import ie.setu.utils.jsonToObject
 import kong.unirest.HttpResponse
 import kong.unirest.JsonNode
 import kong.unirest.Unirest
-import org.joda.time.DateTime
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
@@ -43,12 +40,11 @@ class HealthcoachingControllerTest {
 
         @Test
         fun `deleting a Activity when it exists, returns a 204 response`() {
-            var id =5
-            //Arrange - add the user that we plan to do a delete on
-            val addedResponse = addHealth_Coaching(
-                coachingid, coachingproteinintake, coachingmacropercentage, coachinguserid
-            )
-            val addedUser : User = jsonToObject(addedResponse.body.toString())
+
+            var id =1
+            val addResponse = addHealth_Coaching(coachingid, coachingproteinintake, coachingmacropercentage, coachinguserid)
+            assertEquals(201, addResponse.status)
+
 
             //Act & Assert - delete the added user and assert a 204 is returned
             assertEquals(204, deleteHealth_Coaching(id).status)
@@ -111,14 +107,14 @@ class HealthcoachingControllerTest {
 
             //Arrange - add the user
             val addResponse = addHealth_Coaching(coachingid, coachingproteinintake, coachingmacropercentage, coachinguserid )
-            val addedUser : User = jsonToObject(addResponse.body.toString())
+            val addedUser : Health_Coaching = jsonToObject(addResponse.body.toString())
 
             //Assert - retrieve the added user from the database and verify return code
-            val retrieveResponse = retrieveHealth_CoachingById(addedUser.id)
+            val retrieveResponse = retrieveHealth_CoachingById(addedUser.ID)
             assertEquals(200, retrieveResponse.status)
 
             //After - restore the db to previous state by deleting the added user
-            deleteHealth_Coaching(addedUser.id)
+            deleteHealth_Coaching(addedUser.ID)
         }
 
         @Test

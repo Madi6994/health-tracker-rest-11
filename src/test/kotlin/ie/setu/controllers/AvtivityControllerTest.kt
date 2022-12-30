@@ -46,7 +46,7 @@ class AvtivityControllerTest {
             //Arrange - add the user that we plan to do a delete on
             val addedResponse = addActivity(activityid, activitydiscription, activityduration, activitycalories, activitydatetime,
                 activityuserid)
-            val addedUser : User = jsonToObject(addedResponse.body.toString())
+            val addedUser : Activity = jsonToObject(addedResponse.body.toString())
 
             //Act & Assert - delete the added user and assert a 204 is returned
             assertEquals(204, deleteActivity(id).status)

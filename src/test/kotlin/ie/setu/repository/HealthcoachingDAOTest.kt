@@ -19,7 +19,7 @@ import kotlin.test.assertEquals
 
 
 
-private val activity3 = activities.get(2)
+private val calories3 = Calories.get(2)
 
 
 
@@ -201,7 +201,7 @@ class HealthcoachingDAOTest {
 
                 //Act & Assert
                 assertEquals(5, HealthcoachDAO.getAll().size)
-                HealthcoachDAO.deleteBycoachId(activity3.id)
+                HealthcoachDAO.deleteBycoachId(calories3.id)
                 assertEquals(4, HealthcoachDAO.getAll().size)
             }
         }

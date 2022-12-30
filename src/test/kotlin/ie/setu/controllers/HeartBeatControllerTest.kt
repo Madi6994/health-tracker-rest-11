@@ -151,7 +151,7 @@ class HeartBeatControllerTest {
     }
 
     private fun addHeartBeat (id:Int, rate: Int, userId: Int): HttpResponse<JsonNode> {
-        return Unirest.post(origin + "/api/heartbeat")
+        return Unirest.post(origin + "/api/heartbeats")
             .body("{\"rate\":\"$rate\", \"userId\":\"$userId\" }")
             .asJson()
     }

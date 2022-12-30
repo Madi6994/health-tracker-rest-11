@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 
-private val activity3 = activities.get(2)
+private val calories3 = Calories.get(2)
 class TrackingwaterintakeDAOTest {
 
     companion object {
@@ -192,7 +192,7 @@ class TrackingwaterintakeDAOTest {
 
                 //Act & Assert
 //                assertEquals(5, waterintakeDAO.getAll().size)
-                waterintakeDAO.deleteBywaterintakeId(activity3.id)
+                waterintakeDAO.deleteBywaterintakeId(calories3.id)
                 assertEquals(4, waterintakeDAO.getAll().size)
             }
         }

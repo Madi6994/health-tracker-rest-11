@@ -46,7 +46,7 @@ class ExercisegoalsControllerTest {
             val addedResponse = addExercise_goals(
                 exerciseid, exercisecaloriestoburn, exercisesteps, exercisedatetime, exerciseuserid)
 
-            val addedUser : User = jsonToObject(addedResponse.body.toString())
+            val addedUser : Exercise_goals = jsonToObject(addedResponse.body.toString())
 
             //Act & Assert - delete the added user and assert a 204 is returned
             assertEquals(204, deleteExercise_goals(id).status)
@@ -113,7 +113,7 @@ class ExercisegoalsControllerTest {
 
             //Arrange - add the user
             val addResponse = addExercise_goals(exerciseid, exercisecaloriestoburn, exercisesteps, exercisedatetime, exerciseuserid)
-            val addedUser : User = jsonToObject(addResponse.body.toString())
+            val addedUser : Exercise_goals = jsonToObject(addResponse.body.toString())
 
             //Assert - retrieve the added user from the database and verify return code
             val retrieveResponse = retrieveExercise_goalsById(addedUser.id)

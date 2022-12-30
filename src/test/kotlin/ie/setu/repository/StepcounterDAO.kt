@@ -18,7 +18,7 @@ import org.w3c.dom.css.Counter
 import kotlin.test.assertEquals
 
 
-private val activity3 = activities.get(2)
+private val calories3 = Calories.get(2)
 class StepcounterDAOTest{
 
     companion object {
@@ -195,7 +195,7 @@ class StepcounterDAOTest{
 
                 //Act & Assert
                 assertEquals(5, stepcounterDAO.getAll().size)
-                stepcounterDAO.deleteByStepId(activity3.id)
+                stepcounterDAO.deleteByStepId(calories3.id)
                 assertEquals(4, stepcounterDAO.getAll().size)
             }
         }

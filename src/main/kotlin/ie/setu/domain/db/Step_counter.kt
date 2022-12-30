@@ -6,7 +6,7 @@ import ie.setu.domain.db.Health_coaching.references
 import org.jetbrains.exposed.sql.ReferenceOption
 import org.jetbrains.exposed.sql.Table
 
-object Step_counter: Table("CoachingActivity") {
+object Step_counter: Table("coachingactivity") {
 
     val id = integer("ID").autoIncrement().primaryKey()
     val steps = integer("Daily_Steps")

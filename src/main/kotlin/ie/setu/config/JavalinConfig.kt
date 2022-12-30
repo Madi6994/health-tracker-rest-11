@@ -1,6 +1,11 @@
 package ie.setu.config
 
 import ie.setu.controllers.HealthTrackerController
+import ie.setu.controllers.HealthTrackerController.addActivity
+import ie.setu.controllers.HealthTrackerController.deleteActivityByActivityId
+import ie.setu.controllers.HealthTrackerController.getActivitiesByActivityId
+import ie.setu.controllers.HealthTrackerController.getAllActivities
+import ie.setu.controllers.HealthTrackerController.updateActivity
 import ie.setu.utils.jsonObjectMapper
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
@@ -76,10 +81,29 @@ class JavalinConfig {
                     patch(HealthTrackerController::updateActivity)
                 }
             }
-            path("/api/heartbeat") {
-                get(HealthTrackerController::getAllrates)
-                post(HealthTrackerController::addHeartBeat)
+            path("/api/heartbeats") {
+                get(HealthTrackerController::getAllHeartBeat)
+                post(HealthTrackerController::addBeat)
+                path("{heart-rate}") {
+                    get(HealthTrackerController::getBeatByID)
+                    delete(HealthTrackerController::deleteBeatById)
+                    patch(HealthTrackerController::updateBeatById)
+                }
             }
+//            path("/api/stepcounter") {
+//                get(HealthTrackerController::)
+//                post(StepcounterController::addActivity)
+//                path("{activity-id}") {
+//                    get(StepcounterController::getActivitiesByActivityId)
+//                    delete(StepcounterController::deleteActivityByActivityId)
+//                    patch(StepcounterController::updateActivity)
+//                }
+//            }
+
+//            path("/api/heartbeat") {
+//                get(HealthTrackerController::getAllrates)
+//                post(HealthTrackerController::addHeartBeat)
+//            }
         }
     }
 

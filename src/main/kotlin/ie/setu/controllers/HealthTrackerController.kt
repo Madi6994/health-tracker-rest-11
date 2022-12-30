@@ -7,7 +7,6 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import ie.setu.domain.Activity
 import ie.setu.domain.HeartBeat
 import ie.setu.domain.User
-import ie.setu.domain.db.HeartRate
 import ie.setu.domain.repository.ActivityDAO
 import ie.setu.domain.repository.HeartBeatDAO
 import ie.setu.domain.repository.UserDAO
@@ -212,30 +211,96 @@ object HealthTrackerController {
     // heart rate stuff
 
     @OpenApi(
-        summary = "Get all rates",
-        operationId = "getAllrates",
+        summary = "Get all heart beat",
+        operationId = "getAllHeartBeat",
         tags = ["HeartBeat"],
-        path = "/api/heartbeat",
+        path = "/api/heartbeats",
         method = HttpMethod.GET,
         responses = [OpenApiResponse("200", [OpenApiContent(Array<HeartBeat>::class)])]
     )
-    fun getAllrates(ctx: Context) {
-        ctx.json(heartBeatDAO.getAll())
+    fun getAllHeartBeat(ctx: Context) {
+        val beat = heartBeatDAO.getAll()
+        if (beat.size != 0) {
+            ctx.status(200)
+        }
+        else{
+            ctx.status(404)
+        }
+        ctx.json(beat)
     }
 
     @OpenApi(
-        summary = "Add rates",
-        operationId = "addHeartBeat",
+        summary = "Get beat by ID",
+        operationId = "getBeatByID",
         tags = ["HeartBeat"],
-        path = "/api/heartbeat",
+        path = "/api/heartbeats/{heart-rate}",
+        method = HttpMethod.GET,
+        pathParams = [OpenApiParam("heart-rate", Int::class, "heart rate")],
+        responses  = [OpenApiResponse("200", [OpenApiContent(HeartBeat::class)])]
+    )
+    fun getBeatByID(ctx: Context) {
+        val beat = heartBeatDAO.findByheartId(ctx.pathParam("heart-rate").toInt())
+        if (beat != null) {
+            ctx.json(beat)
+            ctx.status(200)
+        }
+        else{
+            ctx.status(404)
+        }
+    }
+
+    @OpenApi(
+        summary = "Add beat",
+        operationId = "addBeat",
+        tags = ["HeartBeat"],
+        path = "/api/heartbeats",
         method = HttpMethod.POST,
+        pathParams = [OpenApiParam("heart-rate", Int::class, "heart rate")],
         responses  = [OpenApiResponse("200")]
     )
-    fun addHeartBeat(ctx: Context) {
-        val mapper = jacksonObjectMapper()
-        val heartBeat = mapper.readValue<HeartBeat>(ctx.body())
-        heartBeatDAO.save(heartBeat)
-        ctx.json(heartBeat)
+    fun addBeat(ctx: Context) {
+        val beat : HeartBeat = jsonToObject(ctx.body())
+        val beat1 = heartBeatDAO.save(beat)
+        if (beat1 != null) {
+            beat.id = beat1
+            ctx.json(beat1)
+            ctx.status(201)
+        }
+    }
+
+
+
+    @OpenApi(
+        summary = "Delete beat by ID",
+        operationId = "deleteBeatById",
+        tags = ["HeartBeat"],
+        path = "/api/heartbeats/{heart-rate}",
+        method = HttpMethod.DELETE,
+        pathParams = [OpenApiParam("heart-rate", Int::class, "heart rate")],
+        responses  = [OpenApiResponse("204")]
+    )
+    fun deleteBeatById(ctx: Context){
+        if (heartBeatDAO.deleteByheartId(ctx.pathParam("heart-rate").toInt()) != 0)
+            ctx.status(204)
+        else
+            ctx.status(404)
+    }
+
+    @OpenApi(
+        summary = "Update beat by ID",
+        operationId = "updateBeatById",
+        tags = ["HeartBeat"],
+        path = "/api/heartbeats/{heart-rate}",
+        method = HttpMethod.PATCH,
+        pathParams = [OpenApiParam("heart-rate", Int::class, "heart rate")],
+        responses  = [OpenApiResponse("204")]
+    )
+    fun updateBeatById(ctx: Context){
+        val foundBeat : HeartBeat = jsonToObject(ctx.body())
+        if (heartBeatDAO.updateByheartId(heartId = ctx.pathParam("heart-rate").toInt(),heartDTO = foundBeat ) != 0)
+            ctx.status(204)
+        else
+            ctx.status(404)
     }
 
 }
