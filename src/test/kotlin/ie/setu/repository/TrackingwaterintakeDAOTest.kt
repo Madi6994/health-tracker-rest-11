@@ -1,11 +1,8 @@
 package ie.setu.repository
 
-import ie.setu.domain.Exercise_goals
-import ie.setu.domain.Step_Counter
-import ie.setu.domain.db.Exercise_goal
-import ie.setu.domain.db.Step_counter
-import ie.setu.domain.repository.ExercisegoalsDAO
-import ie.setu.domain.repository.StepcounterDAO
+import ie.setu.domain.Tracking_Water_Intake
+import ie.setu.domain.db.Tracking_water_intake
+import ie.setu.domain.repository.TrackingwaterintakeDAO
 import ie.setu.helpers.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
@@ -14,12 +11,11 @@ import org.joda.time.DateTime
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
-import org.w3c.dom.css.Counter
 import kotlin.test.assertEquals
 
 
 private val activity3 = activities.get(2)
-class StepcounterDAOTest{
+class TrackingwaterintakeDAOTest {
 
     companion object {
         //Make a connection to a local, in memory H2 database.
@@ -31,6 +27,7 @@ class StepcounterDAOTest{
     }
 
 
+
     @Nested
     inner class CreateActivities {
 
@@ -39,17 +36,18 @@ class StepcounterDAOTest{
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
-                assertEquals(Counter.get(0), stepcounterDAO.findByStepId(Counter.get(0).ID))
-                assertEquals(Counter.get(1), stepcounterDAO.findByStepId(Counter.get(1).ID))
-                assertEquals(Counter.get(2), stepcounterDAO.findByStepId(Counter.get(2).ID))
-                assertEquals(Counter.get(3), stepcounterDAO.findByStepId(Counter.get(3).ID))
-                assertEquals(Counter.get(4), stepcounterDAO.findByStepId(Counter.get(4).ID))
+                assertEquals(3, waterintakeDAO.getAll().size)
+                assertEquals(Waterintake.get(0), waterintakeDAO.findBywaterintakeId(Waterintake.get(0).ID))
+                assertEquals(Waterintake.get(1), waterintakeDAO.findBywaterintakeId(Waterintake.get(1).ID))
+                assertEquals(Waterintake.get(2), waterintakeDAO.findBywaterintakeId(Waterintake.get(2).ID))
+                assertEquals(Waterintake.get(3), waterintakeDAO.findBywaterintakeId(Waterintake.get(3).ID))
+                assertEquals(Waterintake.get(4), waterintakeDAO.findBywaterintakeId(Waterintake.get(4).ID))
             }
         }
     }
+
 
     @Nested
     inner class ReadActivities {
@@ -59,9 +57,9 @@ class StepcounterDAOTest{
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(3, waterintakeDAO.getAll().size)
             }
         }
 
@@ -71,9 +69,9 @@ class StepcounterDAOTest{
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(0, stepcounterDAO.findByUserId(3).size)
+                assertEquals(0, waterintakeDAO.findByUserId(3).size)
             }
         }
 
@@ -83,13 +81,13 @@ class StepcounterDAOTest{
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(Counter.get(0), stepcounterDAO.findByUserId(1).get(0))
-                assertEquals(Counter.get(1), stepcounterDAO.findByUserId(1).get(1))
-                assertEquals(Counter.get(2), stepcounterDAO.findByUserId(2).get(0))
-                assertEquals(Counter.get(3), stepcounterDAO.findByUserId(1).get(1))
-                assertEquals(Counter.get(4), stepcounterDAO.findByUserId(1).get(0))
+                assertEquals(Waterintake.get(0), waterintakeDAO.findByUserId(1).get(0))
+                assertEquals(Waterintake.get(1), waterintakeDAO.findByUserId(1).get(1))
+                assertEquals(Waterintake.get(2), waterintakeDAO.findByUserId(2).get(0))
+                assertEquals(Waterintake.get(3), waterintakeDAO.findByUserId(1).get(1))
+                assertEquals(Waterintake.get(4), waterintakeDAO.findByUserId(1).get(0))
             }
         }
 
@@ -99,11 +97,11 @@ class StepcounterDAOTest{
             transaction {
 
                 //Arrange - create and setup activityDAO object
-                SchemaUtils.create(Step_counter)
-                val stepcounterDAO = StepcounterDAO()
+                SchemaUtils.create(Tracking_water_intake)
+                val waterintakeDAO = TrackingwaterintakeDAO()
 
                 //Act & Assert
-                assertEquals(0, stepcounterDAO.getAll().size)
+                assertEquals(0, waterintakeDAO.getAll().size)
             }
         }
 
@@ -113,9 +111,9 @@ class StepcounterDAOTest{
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(null, stepcounterDAO.findByStepId(4))
+                assertEquals(null, waterintakeDAO.findBywaterintakeId(4))
             }
         }
 
@@ -124,15 +122,13 @@ class StepcounterDAOTest{
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(Counter.get(1), stepcounterDAO.findByStepId(1))
-                assertEquals(Counter.get(3), stepcounterDAO.findByStepId(3))
+                assertEquals(Waterintake.get(1), waterintakeDAO.findBywaterintakeId(1))
+                assertEquals(Waterintake.get(3), waterintakeDAO.findBywaterintakeId(3))
             }
         }
     }
-
-
 
     @Nested
     inner class UpdateActivities {
@@ -142,12 +138,12 @@ class StepcounterDAOTest{
 
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                val Counterupdate = Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1)
-                stepcounterDAO.updateByStepId(Counterupdate.ID, Counterupdate)
-                assertEquals(Counterupdate, stepcounterDAO.findByStepId(3))
+                val Waterintakeupdate = Tracking_Water_Intake(ID = 1, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 1)
+                waterintakeDAO.updateBywaterintakeId(Waterintakeupdate.ID, Waterintakeupdate)
+                assertEquals(Waterintakeupdate, waterintakeDAO.findBywaterintakeId(3))
             }
         }
 
@@ -157,16 +153,17 @@ class StepcounterDAOTest{
 
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                val Counterupdate = Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1)
-                stepcounterDAO.updateByStepId(4, Counterupdate)
-                assertEquals(null, stepcounterDAO.findByStepId(4))
-                assertEquals(5, stepcounterDAO.getAll().size)
+                val Waterintakeupdate = Tracking_Water_Intake(ID = 1, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 1)
+                waterintakeDAO.updateBywaterintakeId(4, Waterintakeupdate)
+                assertEquals(null, waterintakeDAO.findBywaterintakeId(4))
+                assertEquals(5, waterintakeDAO.getAll().size)
             }
         }
     }
+
 
     @Nested
     inner class DeleteActivities {
@@ -176,12 +173,12 @@ class StepcounterDAOTest{
 
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(5, stepcounterDAO.getAll().size)
-                stepcounterDAO.deleteByStepId(4)
-                assertEquals(5, stepcounterDAO.getAll().size)
+                assertEquals(5, waterintakeDAO.getAll().size)
+                waterintakeDAO.deleteBywaterintakeId(4)
+                assertEquals(5, waterintakeDAO.getAll().size)
             }
         }
 
@@ -191,12 +188,12 @@ class StepcounterDAOTest{
 
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(5, stepcounterDAO.getAll().size)
-                stepcounterDAO.deleteByStepId(activity3.id)
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(5, waterintakeDAO.getAll().size)
+                waterintakeDAO.deleteBywaterintakeId(activity3.id)
+                assertEquals(3, waterintakeDAO.getAll().size)
             }
         }
 
@@ -206,12 +203,12 @@ class StepcounterDAOTest{
 
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
-                stepcounterDAO.deleteByUserId(3)
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(3, waterintakeDAO.getAll().size)
+                waterintakeDAO.deleteByUserId(3)
+                assertEquals(3, waterintakeDAO.getAll().size)
             }
         }
 
@@ -223,15 +220,19 @@ class StepcounterDAOTest{
 
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val stepcounterDAO = populateStepCounterTable()
+                val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
-                stepcounterDAO.deleteByUserId(1)
-                assertEquals(1, stepcounterDAO.getAll().size)
+                assertEquals(3, waterintakeDAO.getAll().size)
+                waterintakeDAO.deleteByUserId(1)
+                assertEquals(1, waterintakeDAO.getAll().size)
             }
         }
     }
+
+
+
+
 
 
 
