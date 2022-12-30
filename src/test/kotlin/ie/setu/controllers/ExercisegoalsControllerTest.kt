@@ -1,11 +1,8 @@
 package ie.setu.controllers
 
 import ie.setu.config.DbConfig
-import ie.setu.domain.Activity
 import ie.setu.domain.Exercise_goals
 import ie.setu.domain.User
-import ie.setu.domain.db.Activities
-import ie.setu.domain.db.Activities.description
 import ie.setu.domain.db.Exercise_goal
 import ie.setu.helpers.*
 import ie.setu.utils.jsonToObject
@@ -169,16 +166,16 @@ class ExercisegoalsControllerTest {
         assertEquals(201, addResponse.status)
 
         //Assert - retrieve the added user from the database and verify return code
-        val retrieveResponse= retrieveExercise_goalsById(activityid)
+        val retrieveResponse= retrieveExercise_goalsById(exerciseid)
         assertEquals(200, retrieveResponse.status)
 
         //Assert - verify the contents of the retrieved user
-        val retrievedActivity : Activity = jsonToObject(addResponse.body.toString())
-        assertEquals(activitydiscription, retrievedActivity.description)
-        assertEquals(activityid, retrievedActivity.id)
+        val retrievedExercise : Exercise_goals = jsonToObject(addResponse.body.toString())
+        assertEquals(exercisecaloriestoburn, retrievedExercise.Calories_To_Burn)
+        assertEquals(exerciseid, retrievedExercise.id)
 
         //After - restore the db to previous state by deleting the added user
-        val deleteResponse = deleteExercise_goals(retrievedActivity.id)
+        val deleteResponse = deleteExercise_goals(retrievedExercise.id)
         assertEquals(204, deleteResponse.status)
     }
 
