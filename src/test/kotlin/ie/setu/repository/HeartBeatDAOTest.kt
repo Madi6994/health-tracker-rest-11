@@ -50,7 +50,7 @@ class HeartBeatDAOTest {
                 val userDAO = populateUserTable()
                 val heartbeatDAO = populateHeartBeatTable()
                 //Act & Assert
-                assertEquals(3, heartbeatDAO.getAll().size)
+                assertEquals(5, heartbeatDAO.getAll().size)
                 assertEquals(rates.get(0), heartbeatDAO.findByheartId(rates.get(0).id))
                 assertEquals(rates.get(1), heartbeatDAO.findByheartId(rates.get(1).id))
                 assertEquals(rates.get(2), heartbeatDAO.findByheartId(rates.get(2).id))
@@ -96,10 +96,10 @@ class HeartBeatDAOTest {
                 val heartbeatDAO = populateHeartBeatTable()
                 //Act & Assert
                 assertEquals(rates.get(0), heartbeatDAO.findByUserId(1).get(0))
-                assertEquals(rates.get(1), heartbeatDAO.findByUserId(1).get(1))
-                assertEquals(rates.get(2), heartbeatDAO.findByUserId(2).get(0))
-                assertEquals(rates.get(3), heartbeatDAO.findByUserId(1).get(1))
-                assertEquals(rates.get(4), heartbeatDAO.findByUserId(1).get(0))
+                assertEquals(rates.get(1), heartbeatDAO.findByUserId(2).get(0))
+                assertEquals(rates.get(2), heartbeatDAO.findByUserId(3).get(0))
+                assertEquals(rates.get(3), heartbeatDAO.findByUserId(4).get(0))
+                assertEquals(rates.get(4), heartbeatDAO.findByUserId(5).get(0))
             }
         }
 

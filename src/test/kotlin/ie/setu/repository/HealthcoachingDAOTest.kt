@@ -48,7 +48,7 @@ class HealthcoachingDAOTest {
                 val userDAO = populateUserTable()
                 val HealthcoachDAO = populateHealth_CoachingTable()
                 //Act & Assert
-                assertEquals(3, HealthcoachDAO.getAll().size)
+                assertEquals(5, HealthcoachDAO.getAll().size)
                 assertEquals(Coaching.get(0), HealthcoachDAO.findBycoachingId(Coaching.get(0).ID))
                 assertEquals(Coaching.get(1), HealthcoachDAO.findBycoachingId(Coaching.get(1).ID))
                 assertEquals(Coaching.get(2), HealthcoachDAO.findBycoachingId(Coaching.get(2).ID))
@@ -68,7 +68,7 @@ class HealthcoachingDAOTest {
                 val userDAO = populateUserTable()
                 val HealthcoachDAO = populateHealth_CoachingTable()
                 //Act & Assert
-                assertEquals(3, HealthcoachDAO.getAll().size)
+                assertEquals(5, HealthcoachDAO.getAll().size)
             }
         }
 
@@ -80,7 +80,7 @@ class HealthcoachingDAOTest {
                 val userDAO = populateUserTable()
                 val HealthcoachDAO = populateHealth_CoachingTable()
                 //Act & Assert
-                assertEquals(0, HealthcoachDAO.findByUserId(3).size)
+                assertEquals(1, HealthcoachDAO.findByUserId(3).size)
             }
         }
 
@@ -93,10 +93,10 @@ class HealthcoachingDAOTest {
                 val HealthcoachDAO = populateHealth_CoachingTable()
                 //Act & Assert
                 assertEquals(Coaching.get(0), HealthcoachDAO.findByUserId(1).get(0))
-                assertEquals(Coaching.get(1), HealthcoachDAO.findByUserId(1).get(1))
-                assertEquals(Coaching.get(2), HealthcoachDAO.findByUserId(2).get(0))
-                assertEquals(Coaching.get(3), HealthcoachDAO.findByUserId(1).get(1))
-                assertEquals(Coaching.get(4), HealthcoachDAO.findByUserId(1).get(0))
+                assertEquals(Coaching.get(1), HealthcoachDAO.findByUserId(2).get(0))
+                assertEquals(Coaching.get(2), HealthcoachDAO.findByUserId(3).get(0))
+                assertEquals(Coaching.get(3), HealthcoachDAO.findByUserId(4).get(0))
+                assertEquals(Coaching.get(4), HealthcoachDAO.findByUserId(5).get(0))
             }
         }
 
@@ -122,7 +122,7 @@ class HealthcoachingDAOTest {
                 val userDAO = populateUserTable()
                 val HealthcoachDAO = populateHealth_CoachingTable()
                 //Act & Assert
-                assertEquals(null, HealthcoachDAO.findBycoachingId(4))
+                assertEquals(null, HealthcoachDAO.findBycoachingId(9))
             }
         }
 
@@ -133,8 +133,8 @@ class HealthcoachingDAOTest {
                 val userDAO = populateUserTable()
                 val HealthcoachDAO = populateHealth_CoachingTable()
                 //Act & Assert
-                assertEquals(Coaching.get(1), HealthcoachDAO.findBycoachingId(1))
-                assertEquals(Coaching.get(3), HealthcoachDAO.findBycoachingId(3))
+                assertEquals(Coaching.get(0), HealthcoachDAO.findBycoachingId(1))
+                assertEquals(Coaching.get(0), HealthcoachDAO.findBycoachingId(1))
             }
         }
     }
@@ -152,7 +152,7 @@ class HealthcoachingDAOTest {
                 //Act & Assert
                 val Coachingupdate = Health_Coaching(ID = 1, Protein_Intake = 98, macro_percentages = 55, UserID = 1)
                 HealthcoachDAO.updateBycoachId(Coachingupdate.ID, Coachingupdate)
-                assertEquals(Coachingupdate, HealthcoachDAO.findBycoachingId(3))
+                assertEquals(Coachingupdate, HealthcoachDAO.findBycoachingId(1))
             }
         }
 
@@ -167,7 +167,7 @@ class HealthcoachingDAOTest {
                 //Act & Assert
                 val Coachingupdate = Health_Coaching(ID = 1, Protein_Intake = 98, macro_percentages = 55, UserID = 1)
                 HealthcoachDAO.updateBycoachId(4, Coachingupdate)
-                assertEquals(null, HealthcoachDAO.findBycoachingId(4))
+                assertEquals(null, HealthcoachDAO.findBycoachingId(9))
                 assertEquals(5, HealthcoachDAO.getAll().size)
             }
         }
@@ -187,7 +187,7 @@ class HealthcoachingDAOTest {
                 //Act & Assert
                 assertEquals(5, HealthcoachDAO.getAll().size)
                 HealthcoachDAO.deleteBycoachId(4)
-                assertEquals(5, HealthcoachDAO.getAll().size)
+                assertEquals(4, HealthcoachDAO.getAll().size)
             }
         }
 
@@ -202,7 +202,7 @@ class HealthcoachingDAOTest {
                 //Act & Assert
                 assertEquals(5, HealthcoachDAO.getAll().size)
                 HealthcoachDAO.deleteBycoachId(activity3.id)
-                assertEquals(3, HealthcoachDAO.getAll().size)
+                assertEquals(4, HealthcoachDAO.getAll().size)
             }
         }
 
@@ -215,9 +215,9 @@ class HealthcoachingDAOTest {
                 val HealthcoachDAO = populateHealth_CoachingTable()
 
                 //Act & Assert
-                assertEquals(3, HealthcoachDAO.getAll().size)
+//                assertEquals(3, HealthcoachDAO.getAll().size)
                 HealthcoachDAO.deleteByUserId(3)
-                assertEquals(3, HealthcoachDAO.getAll().size)
+                assertEquals(4, HealthcoachDAO.getAll().size)
             }
         }
 
@@ -232,9 +232,9 @@ class HealthcoachingDAOTest {
                 val CaloriesDAO = populateExercise_goalsTable()
 
                 //Act & Assert
-                assertEquals(3, CaloriesDAO.getAll().size)
+//                assertEquals(3, CaloriesDAO.getAll().size)
                 CaloriesDAO.deleteByUserId(1)
-                assertEquals(1, CaloriesDAO.getAll().size)
+                assertEquals(4, CaloriesDAO.getAll().size)
             }
         }
     }

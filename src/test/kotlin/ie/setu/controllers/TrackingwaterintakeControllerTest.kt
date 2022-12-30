@@ -31,7 +31,6 @@ class TrackingwaterintakeControllerTest {
             .body("{\"Glass_of_Water\":\"$Glass_of_Water\", \"DateTime\":\"$DateTime\",\"UserID\":\"$UserID\" }")
             .asJson()
     }
-
     inner class DeleteActivity{
 
         @Test

@@ -44,7 +44,7 @@ class StepcounterControllerTest {
 
         @Test
         fun `deleting a Activity when it exists, returns a 204 response`() {
-            var id =1
+            var id =2
             //Arrange - add the user that we plan to do a delete on
             val addedResponse = addStepCounter(stepcounterid, stepcounterdailysteps, stepcounteruserid)
             val addedUser : User = jsonToObject(addedResponse.body.toString())

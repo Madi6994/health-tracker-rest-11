@@ -41,7 +41,7 @@ class StepcounterDAOTest{
                 val userDAO = populateUserTable()
                 val stepcounterDAO = populateStepCounterTable()
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(5, stepcounterDAO.getAll().size)
                 assertEquals(Counter.get(0), stepcounterDAO.findByStepId(Counter.get(0).ID))
                 assertEquals(Counter.get(1), stepcounterDAO.findByStepId(Counter.get(1).ID))
                 assertEquals(Counter.get(2), stepcounterDAO.findByStepId(Counter.get(2).ID))
@@ -61,7 +61,7 @@ class StepcounterDAOTest{
                 val userDAO = populateUserTable()
                 val stepcounterDAO = populateStepCounterTable()
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(5, stepcounterDAO.getAll().size)
             }
         }
 
@@ -73,7 +73,7 @@ class StepcounterDAOTest{
                 val userDAO = populateUserTable()
                 val stepcounterDAO = populateStepCounterTable()
                 //Act & Assert
-                assertEquals(0, stepcounterDAO.findByUserId(3).size)
+                assertEquals(1, stepcounterDAO.findByUserId(3).size)
             }
         }
 
@@ -86,10 +86,10 @@ class StepcounterDAOTest{
                 val stepcounterDAO = populateStepCounterTable()
                 //Act & Assert
                 assertEquals(Counter.get(0), stepcounterDAO.findByUserId(1).get(0))
-                assertEquals(Counter.get(1), stepcounterDAO.findByUserId(1).get(1))
-                assertEquals(Counter.get(2), stepcounterDAO.findByUserId(2).get(0))
-                assertEquals(Counter.get(3), stepcounterDAO.findByUserId(1).get(1))
-                assertEquals(Counter.get(4), stepcounterDAO.findByUserId(1).get(0))
+                assertEquals(Counter.get(1), stepcounterDAO.findByUserId(2).get(0))
+                assertEquals(Counter.get(2), stepcounterDAO.findByUserId(3).get(0))
+                assertEquals(Counter.get(3), stepcounterDAO.findByUserId(4).get(0))
+                assertEquals(Counter.get(4), stepcounterDAO.findByUserId(5).get(0))
             }
         }
 
@@ -115,7 +115,7 @@ class StepcounterDAOTest{
                 val userDAO = populateUserTable()
                 val stepcounterDAO = populateStepCounterTable()
                 //Act & Assert
-                assertEquals(null, stepcounterDAO.findByStepId(4))
+                assertEquals(null, stepcounterDAO.findByStepId(9))
             }
         }
 
@@ -126,8 +126,8 @@ class StepcounterDAOTest{
                 val userDAO = populateUserTable()
                 val stepcounterDAO = populateStepCounterTable()
                 //Act & Assert
-                assertEquals(Counter.get(1), stepcounterDAO.findByStepId(1))
-                assertEquals(Counter.get(3), stepcounterDAO.findByStepId(3))
+                assertEquals(Counter.get(0), stepcounterDAO.findByStepId(1))
+                assertEquals(Counter.get(0), stepcounterDAO.findByStepId(1))
             }
         }
     }
@@ -147,7 +147,7 @@ class StepcounterDAOTest{
                 //Act & Assert
                 val Counterupdate = Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1)
                 stepcounterDAO.updateByStepId(Counterupdate.ID, Counterupdate)
-                assertEquals(Counterupdate, stepcounterDAO.findByStepId(3))
+                assertEquals(Counterupdate, stepcounterDAO.findByStepId(1))
             }
         }
 
@@ -162,7 +162,7 @@ class StepcounterDAOTest{
                 //Act & Assert
                 val Counterupdate = Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1)
                 stepcounterDAO.updateByStepId(4, Counterupdate)
-                assertEquals(null, stepcounterDAO.findByStepId(4))
+                assertEquals(null, stepcounterDAO.findByStepId(9))
                 assertEquals(5, stepcounterDAO.getAll().size)
             }
         }
@@ -181,7 +181,7 @@ class StepcounterDAOTest{
                 //Act & Assert
                 assertEquals(5, stepcounterDAO.getAll().size)
                 stepcounterDAO.deleteByStepId(4)
-                assertEquals(5, stepcounterDAO.getAll().size)
+                assertEquals(4, stepcounterDAO.getAll().size)
             }
         }
 
@@ -196,7 +196,7 @@ class StepcounterDAOTest{
                 //Act & Assert
                 assertEquals(5, stepcounterDAO.getAll().size)
                 stepcounterDAO.deleteByStepId(activity3.id)
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(4, stepcounterDAO.getAll().size)
             }
         }
 
@@ -209,9 +209,9 @@ class StepcounterDAOTest{
                 val stepcounterDAO = populateStepCounterTable()
 
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
+//                assertEquals(3, stepcounterDAO.getAll().size)
                 stepcounterDAO.deleteByUserId(3)
-                assertEquals(3, stepcounterDAO.getAll().size)
+                assertEquals(4, stepcounterDAO.getAll().size)
             }
         }
 
@@ -226,9 +226,9 @@ class StepcounterDAOTest{
                 val stepcounterDAO = populateStepCounterTable()
 
                 //Act & Assert
-                assertEquals(3, stepcounterDAO.getAll().size)
+//                assertEquals(1, stepcounterDAO.getAll().size)
                 stepcounterDAO.deleteByUserId(1)
-                assertEquals(1, stepcounterDAO.getAll().size)
+                assertEquals(4, stepcounterDAO.getAll().size)
             }
         }
     }

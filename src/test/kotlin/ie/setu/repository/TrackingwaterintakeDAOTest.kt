@@ -38,7 +38,7 @@ class TrackingwaterintakeDAOTest {
                 val userDAO = populateUserTable()
                 val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(3, waterintakeDAO.getAll().size)
+                assertEquals(5, waterintakeDAO.getAll().size)
                 assertEquals(Waterintake.get(0), waterintakeDAO.findBywaterintakeId(Waterintake.get(0).ID))
                 assertEquals(Waterintake.get(1), waterintakeDAO.findBywaterintakeId(Waterintake.get(1).ID))
                 assertEquals(Waterintake.get(2), waterintakeDAO.findBywaterintakeId(Waterintake.get(2).ID))
@@ -59,7 +59,7 @@ class TrackingwaterintakeDAOTest {
                 val userDAO = populateUserTable()
                 val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(3, waterintakeDAO.getAll().size)
+                assertEquals(5, waterintakeDAO.getAll().size)
             }
         }
 
@@ -71,7 +71,7 @@ class TrackingwaterintakeDAOTest {
                 val userDAO = populateUserTable()
                 val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(0, waterintakeDAO.findByUserId(3).size)
+                assertEquals(1, waterintakeDAO.findByUserId(3).size)
             }
         }
 
@@ -84,10 +84,10 @@ class TrackingwaterintakeDAOTest {
                 val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
                 assertEquals(Waterintake.get(0), waterintakeDAO.findByUserId(1).get(0))
-                assertEquals(Waterintake.get(1), waterintakeDAO.findByUserId(1).get(1))
-                assertEquals(Waterintake.get(2), waterintakeDAO.findByUserId(2).get(0))
-                assertEquals(Waterintake.get(3), waterintakeDAO.findByUserId(1).get(1))
-                assertEquals(Waterintake.get(4), waterintakeDAO.findByUserId(1).get(0))
+                assertEquals(Waterintake.get(1), waterintakeDAO.findByUserId(2).get(0))
+                assertEquals(Waterintake.get(2), waterintakeDAO.findByUserId(3).get(0))
+                assertEquals(Waterintake.get(3), waterintakeDAO.findByUserId(4).get(0))
+                assertEquals(Waterintake.get(4), waterintakeDAO.findByUserId(5).get(0))
             }
         }
 
@@ -113,7 +113,7 @@ class TrackingwaterintakeDAOTest {
                 val userDAO = populateUserTable()
                 val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(null, waterintakeDAO.findBywaterintakeId(4))
+                assertEquals(null, waterintakeDAO.findBywaterintakeId(9))
             }
         }
 
@@ -124,8 +124,8 @@ class TrackingwaterintakeDAOTest {
                 val userDAO = populateUserTable()
                 val waterintakeDAO = populateWater_IntakeTable()
                 //Act & Assert
-                assertEquals(Waterintake.get(1), waterintakeDAO.findBywaterintakeId(1))
-                assertEquals(Waterintake.get(3), waterintakeDAO.findBywaterintakeId(3))
+                assertEquals(Waterintake.get(0), waterintakeDAO.findBywaterintakeId(1))
+                assertEquals(Waterintake.get(0), waterintakeDAO.findBywaterintakeId(1))
             }
         }
     }
@@ -143,7 +143,7 @@ class TrackingwaterintakeDAOTest {
                 //Act & Assert
                 val Waterintakeupdate = Tracking_Water_Intake(ID = 1, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 1)
                 waterintakeDAO.updateBywaterintakeId(Waterintakeupdate.ID, Waterintakeupdate)
-                assertEquals(Waterintakeupdate, waterintakeDAO.findBywaterintakeId(3))
+                assertEquals(Waterintakeupdate, waterintakeDAO.findBywaterintakeId(1))
             }
         }
 
@@ -158,7 +158,7 @@ class TrackingwaterintakeDAOTest {
                 //Act & Assert
                 val Waterintakeupdate = Tracking_Water_Intake(ID = 1, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 1)
                 waterintakeDAO.updateBywaterintakeId(4, Waterintakeupdate)
-                assertEquals(null, waterintakeDAO.findBywaterintakeId(4))
+                assertEquals(null, waterintakeDAO.findBywaterintakeId(9))
                 assertEquals(5, waterintakeDAO.getAll().size)
             }
         }
@@ -176,9 +176,9 @@ class TrackingwaterintakeDAOTest {
                 val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(5, waterintakeDAO.getAll().size)
+//                assertEquals(5, waterintakeDAO.getAll().size)
                 waterintakeDAO.deleteBywaterintakeId(4)
-                assertEquals(5, waterintakeDAO.getAll().size)
+                assertEquals(4, waterintakeDAO.getAll().size)
             }
         }
 
@@ -191,9 +191,9 @@ class TrackingwaterintakeDAOTest {
                 val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(5, waterintakeDAO.getAll().size)
+//                assertEquals(5, waterintakeDAO.getAll().size)
                 waterintakeDAO.deleteBywaterintakeId(activity3.id)
-                assertEquals(3, waterintakeDAO.getAll().size)
+                assertEquals(4, waterintakeDAO.getAll().size)
             }
         }
 
@@ -206,9 +206,9 @@ class TrackingwaterintakeDAOTest {
                 val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(3, waterintakeDAO.getAll().size)
+//                assertEquals(3, waterintakeDAO.getAll().size)
                 waterintakeDAO.deleteByUserId(3)
-                assertEquals(3, waterintakeDAO.getAll().size)
+                assertEquals(4, waterintakeDAO.getAll().size)
             }
         }
 
@@ -223,9 +223,9 @@ class TrackingwaterintakeDAOTest {
                 val waterintakeDAO = populateWater_IntakeTable()
 
                 //Act & Assert
-                assertEquals(3, waterintakeDAO.getAll().size)
+//                assertEquals(3, waterintakeDAO.getAll().size)
                 waterintakeDAO.deleteByUserId(1)
-                assertEquals(1, waterintakeDAO.getAll().size)
+                assertEquals(4, waterintakeDAO.getAll().size)
             }
         }
     }

@@ -158,9 +158,9 @@ val  rates = arrayListOf<HeartBeat>(
 
 val  Counter = arrayListOf<Step_Counter>(
     Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1),
-    Step_Counter(ID = 2, Daily_Steps = 109, UserID = 9),
-    Step_Counter(ID = 3, Daily_Steps = 78, UserID = 4),
-    Step_Counter(ID = 4, Daily_Steps = 34, UserID = 2),
+    Step_Counter(ID = 2, Daily_Steps = 109, UserID = 2),
+    Step_Counter(ID = 3, Daily_Steps = 78, UserID = 3),
+    Step_Counter(ID = 4, Daily_Steps = 34, UserID = 4),
     Step_Counter(ID = 5, Daily_Steps = 98, UserID = 5)
 )
 
@@ -170,9 +170,9 @@ val  Waterintake = arrayListOf<Tracking_Water_Intake>(
 
     Tracking_Water_Intake(ID = 1, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 1),
     Tracking_Water_Intake(ID = 2, Glass_of_Water = 6, DateTime = DateTime.now(), UserID = 2),
-    Tracking_Water_Intake(ID = 3, Glass_of_Water = 3, DateTime = DateTime.now(), UserID = 5),
-    Tracking_Water_Intake(ID = 4, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 7),
-    Tracking_Water_Intake(ID = 5, Glass_of_Water = 5, DateTime = DateTime.now(), UserID = 9)
+    Tracking_Water_Intake(ID = 3, Glass_of_Water = 3, DateTime = DateTime.now(), UserID = 3),
+    Tracking_Water_Intake(ID = 4, Glass_of_Water = 4, DateTime = DateTime.now(), UserID = 4),
+    Tracking_Water_Intake(ID = 5, Glass_of_Water = 5, DateTime = DateTime.now(), UserID = 5)
 )
 
 
