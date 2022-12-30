@@ -30,24 +30,5 @@ class HeartBeatDAOTest {
         }
     }
 
-    @Nested
-    inner class CreateheartRates {
 
-        @Test
-        fun  `multiple rates added to table can be retrieved successfully`(){
-            transaction {
-
-                val userDAO = populateUserTable()
-
-                SchemaUtils.create(HeartRate)
-                val HeartBeatDAO = HeartBeatDAO()
-
-                HeartBeatDAO.save(obj1)
-                HeartBeatDAO.save(obj2)
-                HeartBeatDAO.save(obj3)
-
-                assertEquals(3, HeartBeatDAO.getAll().size)
-            }
-        }
-    }
 }

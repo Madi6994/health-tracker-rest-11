@@ -6,8 +6,8 @@ import ie.setu.domain.db.HeartRate
 import ie.setu.domain.db.Step_counter
 import ie.setu.utils.mapToHeartRate
 import ie.setu.utils.mapToStep_counter
-import org.jetbrains.exposed.sql.insert
-import org.jetbrains.exposed.sql.selectAll
+import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
 
 
@@ -23,13 +23,56 @@ class HeartBeatDAO {
         return heartbeatList
     }
 
-//    fun save(rateobj : HeartBeat){
-//        transaction {
-//            HeartRate.insert {
-//                it[id] = rateobj.id
-//                it[rate] = rateobj.rate
-//                it[userId] = rateobj.userId
-//            }
-//        }
-//    }
+    fun findByheartId(id: Int): HeartBeat?{
+        return transaction {
+            HeartRate
+                .select() { Step_counter.id eq id}
+                .map{ mapToHeartRate(it) }
+                .firstOrNull()
+        }
+    }
+
+
+    fun findByUserId(userId: Int): List<HeartBeat>{
+        return transaction {
+            HeartRate
+                .select {Step_counter.userId eq userId}
+                .map { mapToHeartRate(it) }
+        }
+    }
+
+    fun save(stepact: HeartBeat){
+        transaction {
+            HeartRate.insert {
+                it[id] = stepact.id
+                it[rate] = stepact.rate
+                it[userId] = stepact.userId
+
+            }
+        }
+    }
+
+    fun updateByheartId(heartId: Int, heartDTO: HeartBeat){
+        transaction {
+            HeartRate.update ({
+                Step_counter.id eq heartId}) {
+                it[rate] = heartDTO.rate
+                it[userId] = heartDTO.userId
+            }
+        }
+    }
+
+    fun deleteByheartId (heartId: Int): Int{
+        return transaction{
+            HeartRate.deleteWhere { HeartRate.id eq heartId }
+        }
+    }
+
+
+    fun deleteByUserId (userId: Int): Int{
+        return transaction{
+            HeartRate.deleteWhere { HeartRate.userId eq userId }
+        }
+    }
+
 }
