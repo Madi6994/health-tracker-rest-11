@@ -9,7 +9,7 @@ import org.jetbrains.exposed.sql.Table
 object Tracking_water_intake : Table("WaterIntakeActivity") {
     val id = integer("ID").autoIncrement().primaryKey()
     val glass_of_water = integer("Glass_of_Water")
-    val datetime = integer("DateTime")
+    val datetime = datetime("DateTime")
     val userId = integer("user_id").references(Users.id, onDelete = ReferenceOption.CASCADE)
 }
 
