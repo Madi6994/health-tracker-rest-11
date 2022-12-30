@@ -6,12 +6,100 @@ import ie.setu.domain.repository.*
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.joda.time.DateTime
 
+
+//User
 val nonExistingEmail = "112233445566778testUser@xxxxx.xx"
+val nonExistingdiscription = "112233445566778testUser@xxxxx.xx"
 val validName = "Test User 1"
 val validEmail = "testuser1@test.com"
 
 val updatedName = "Updated Name"
 val updatedEmail = "Updated Email"
+
+//Activity
+val activityid = 1
+val activitydiscription="running"
+val activityduration= 20.0
+val activitycalories = 110
+val activitydatetime = DateTime.now()
+val activityuserid= 4
+
+//update
+val updatedactivityid = 1
+val updatedactivitydiscription="running"
+val updatedactivityduration= 20.0
+val updatedactivitycalories = 110
+val updatedactivitydatetime = DateTime.now()
+val updatedactivityuserid= 4
+
+
+
+//Exercise Goals
+val exerciseid = 1
+val exercisecaloriestoburn= 120
+val exercisesteps= 20.0
+val exercisedatetime = DateTime.now()
+val exerciseuserid= 4
+
+//update
+val updatedexerciseid = 1
+val updatedexercisecaloriestoburn=111
+val updatedexercisesteps= 20.0
+val updatedexercisedatetime = DateTime.now()
+val updatedexerciseuserid= 4
+
+
+//Health_Coaching
+val coachingid=1
+val coachingproteinintake = 43
+val coachingmacropercentage= 75
+val coachinguserid = 3
+
+//update
+val updatedcoachingid=1
+val updatedcoachingproteinintake = 63
+val updatedcoachingmacropercentage= 45
+val updatedcoachinguserid = 5
+
+
+
+//HeartBeat
+val heartbeatid= 0
+val heartbeatrate= 98
+val heartbeatuserid = 4
+
+//update
+val updatedheartbeatid= 0
+val updatedheartbeatrate= 102
+val updatedheartbeatuserid = 2
+
+
+//Step_Counter
+val stepcounterid = 3
+val stepcounterdailysteps= 95
+val stepcounteruserid = 5
+
+//update
+val updatestepcounterid = 3
+val updatestepcounterdailysteps= 95
+val updatestepcounteruserid = 5
+
+
+//Tracking_Water_Intake
+val waterintakeid = 1
+val waterintakeglassofwater = 5
+val waterintakedatetime = DateTime.now()
+val waterintakeuserid = 4
+
+//update
+val updatewaterintakeid = 1
+val updatewaterintakeglassofwater = 5
+val updatewaterintakedatetime = DateTime.now()
+val updatewaterintakeuserid = 4
+
+
+
+
 
 val users = arrayListOf<User>(
     User(name = "Alice Wonderland", email = "alice@wonderland.com", id = 1),
@@ -58,10 +146,10 @@ val  rates = arrayListOf<HeartBeat>(
 
 val  Counter = arrayListOf<Step_Counter>(
     Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1),
-    Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1),
-    Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1),
-    Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1),
-    Step_Counter(ID = 1, Daily_Steps = 98, UserID = 1)
+    Step_Counter(ID = 2, Daily_Steps = 109, UserID = 9),
+    Step_Counter(ID = 3, Daily_Steps = 78, UserID = 4),
+    Step_Counter(ID = 4, Daily_Steps = 34, UserID = 2),
+    Step_Counter(ID = 5, Daily_Steps = 98, UserID = 5)
 )
 
 
