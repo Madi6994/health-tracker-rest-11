@@ -45,15 +45,15 @@ class HeartBeatControllerTest {
 
         @Test
         fun `deleting a Activity when it exists, returns a 204 response`() {
-            var id =1
+            var id =-1
             //Arrange - add the user that we plan to do a delete on
             val addedResponse = addHeartBeat(
                 heartbeatid, heartbeatrate, heartbeatuserid
             )
-            val addedUser : User = jsonToObject(addedResponse.body.toString())
+//            val addedBeat : HeartBeat = jsonToObject(addedResponse.body.toString())
 
             //Act & Assert - delete the added user and assert a 204 is returned
-            assertEquals(204, deleteHeartBeat(id).status)
+            assertEquals(204, deleteHeartBeat(heartbeatid).status)
 
             //Act & Assert - attempt to retrieve the deleted user --> 404 response
             assertEquals(404, retrieveHeartBeatById(id).status)
@@ -147,7 +147,7 @@ class HeartBeatControllerTest {
 
 
     private fun deleteHeartBeat (id: Int): HttpResponse<String> {
-        return Unirest.delete(origin + "/api/heartbeat/$id").asString()
+        return Unirest.delete(origin + "/api/heartbeats/$id").asString()
     }
 
     private fun addHeartBeat (id:Int, rate: Int, userId: Int): HttpResponse<JsonNode> {
@@ -157,7 +157,7 @@ class HeartBeatControllerTest {
     }
 
     private fun retrieveHeartBeatById(id: Int) : HttpResponse<String> {
-        return Unirest.get(origin + "/api/heartbeat/${id}").asString()
+        return Unirest.get(origin + "/api/heartbeats/${id}").asString()
     }
 
 

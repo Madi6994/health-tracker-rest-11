@@ -50,8 +50,8 @@ class StepcounterDAO {
         }
     }
 
-    fun updateByStepId(stepId: Int, stepDTO: Step_Counter){
-        transaction {
+    fun updateByStepId(stepId: Int, stepDTO: Step_Counter) : Int {
+       return transaction {
             Step_counter.update ({
                 Step_counter.id eq stepId}) {
                 it[steps] = stepDTO.Daily_Steps

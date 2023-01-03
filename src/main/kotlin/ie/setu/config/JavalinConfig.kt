@@ -90,6 +90,46 @@ class JavalinConfig {
                     patch(HealthTrackerController::updateBeatById)
                 }
             }
+
+            path("/api/exercisegoals") {
+                get(HealthTrackerController::getallgoals)
+                post(HealthTrackerController::addGoal)
+                path("{exercise-goal}") {
+                    get(HealthTrackerController::getgoalByID)
+                    delete(HealthTrackerController::deleteGoalById)
+                    patch(HealthTrackerController::updateGoalById)
+                }
+            }
+
+            path("/api/healthcoaching") {
+                get(HealthTrackerController::getAllHealthCoaching)
+                post(HealthTrackerController::addcoaching)
+                path("{health-coaching}") {
+                    get(HealthTrackerController::getCoachingByID)
+                    delete(HealthTrackerController::deleteCoachingById)
+                    patch(HealthTrackerController::updateCoachingById)
+                }
+            }
+
+            path("/api/stepcounter") {
+                get(HealthTrackerController::getAllStepCounter)
+                post(HealthTrackerController::addcounter)
+                path("{step-counter}") {
+                    get(HealthTrackerController::getCounterByID)
+                    delete(HealthTrackerController::deleteCounterById)
+                    patch(HealthTrackerController::updateCounterById)
+                }
+            }
+
+            path("/api/trackingwaterintake") {
+                get(HealthTrackerController::getAllWaterIntake)
+                post(HealthTrackerController::addwater)
+                path("{tracking-water-intake}") {
+                    get(HealthTrackerController::getWaterByID)
+                    delete(HealthTrackerController::deleteWaterById)
+                    patch(HealthTrackerController::updateWaterById)
+                }
+            }
 //            path("/api/stepcounter") {
 //                get(HealthTrackerController::)
 //                post(StepcounterController::addActivity)

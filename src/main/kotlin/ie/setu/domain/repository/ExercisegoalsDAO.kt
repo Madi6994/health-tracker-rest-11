@@ -38,8 +38,8 @@ class ExercisegoalsDAO {
         }
     }
 
-    fun save(exercisegoal: Exercise_goals){
-        transaction {
+    fun save(exercisegoal: Exercise_goals) : Int?{
+       return transaction {
             Exercise_goal.insert {
                 it[id] = exercisegoal.id
                 it[calories_to_burn] = exercisegoal.Calories_To_Burn
@@ -50,8 +50,8 @@ class ExercisegoalsDAO {
         }
     }
 
-    fun updateByexerciseId(exercId: Int, exercDTO: Exercise_goals){
-        transaction {
+    fun updateByexerciseId(exercId: Int, exercDTO: Exercise_goals) : Int{
+       return transaction {
             Exercise_goal.update ({
                 Exercise_goal.id eq exercId}) {
                 it[calories_to_burn] = exercDTO.Calories_To_Burn
@@ -73,4 +73,5 @@ class ExercisegoalsDAO {
             Exercise_goal.deleteWhere { Exercise_goal.userId eq userId }
         }
     }
+
 }

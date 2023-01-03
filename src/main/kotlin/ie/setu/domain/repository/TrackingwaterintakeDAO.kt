@@ -38,19 +38,19 @@ class TrackingwaterintakeDAO {
         }
     }
 
-    fun save(wateract: Tracking_Water_Intake){
-        transaction {
+    fun save(wateract: Tracking_Water_Intake) : Int?{
+        return transaction {
             Tracking_water_intake.insert {
                 it[id] = wateract.ID
                 it[glass_of_water] = wateract.Glass_of_Water
                 it[datetime] = wateract.DateTime
                 it[userId] = wateract.UserID
-            }
+            } get Tracking_water_intake.id
         }
     }
 
-    fun updateBywaterintakeId(waterId: Int, waterDTO: Tracking_Water_Intake){
-        transaction {
+    fun updateBywaterintakeId(waterId: Int, waterDTO: Tracking_Water_Intake) : Int{
+        return transaction {
             Tracking_water_intake.update ({
                 Tracking_water_intake.id eq waterId}) {
                 it[glass_of_water] = waterDTO.Glass_of_Water

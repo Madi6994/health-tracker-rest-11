@@ -1,13 +1,11 @@
 package ie.setu.domain.repository
 
 import ie.setu.domain.Health_Coaching
-import ie.setu.domain.Step_Counter
+//import ie.setu.domain.Step_Counter
+//import ie.setu.domain.Tracking_Water_Intake
 import ie.setu.domain.db.Health_coaching
-import ie.setu.domain.db.Step_counter
 import ie.setu.utils.mapToHealthcoaching
-import ie.setu.utils.mapToStep_counter
 import org.jetbrains.exposed.sql.*
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class HealthcoachingDAO {
@@ -38,19 +36,19 @@ class HealthcoachingDAO {
         }
     }
 
-    fun save(coachact: Health_Coaching){
-        transaction {
+    fun save(coachact: Health_Coaching) : Int?{
+        return transaction {
             Health_coaching.insert {
                 it[id] = coachact.ID
                 it[protein_intake] = coachact.Protein_Intake
                 it[macro_percentage] = coachact.macro_percentages
                 it[userId] = coachact.UserID
-            }
+            } get Health_coaching.id
         }
     }
 
-    fun updateBycoachId(coachId: Int, coachDTO: Health_Coaching){
-        transaction {
+    fun updateBycoachId(coachId: Int, coachDTO: Health_Coaching) : Int{
+        return transaction {
             Health_coaching.update ({
                 Health_coaching.id eq coachId}) {
                 it[protein_intake] = coachDTO.Protein_Intake

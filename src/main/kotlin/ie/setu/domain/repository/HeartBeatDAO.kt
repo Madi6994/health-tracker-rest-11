@@ -1,13 +1,9 @@
 package ie.setu.domain.repository
 
 import ie.setu.domain.HeartBeat
-import ie.setu.domain.Step_Counter
 import ie.setu.domain.db.HeartRate
-import ie.setu.domain.db.Step_counter
 import ie.setu.utils.mapToHeartRate
-import ie.setu.utils.mapToStep_counter
 import org.jetbrains.exposed.sql.*
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
 
 
