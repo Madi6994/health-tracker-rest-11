@@ -51,7 +51,7 @@ Vue.component('home-page',
       data: () => ({
         users: [],
         activities: [],
-        exerciseactivity: []
+        exerciseactivity: [],
         healthactivity: []
       }),
       created() {

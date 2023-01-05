@@ -104,7 +104,7 @@ Vue.component("user-profile", {
     noUserFound: false,
     activities: [],
     exerciseactivity: [],
-    healthactivity: []
+    healthactivity: [],
   }),
   methods: {
     updateUser: function () {
