@@ -81,8 +81,8 @@
         </ul>
       </div>
       <div class="card-footer text-left">
-        <p  v-if="coachingactivity.length == 0"> No exercises yet...</p>
-        <p  v-if="coachingactivity.length > 0"> Exercises so far...</p>
+        <p  v-if="coachingactivity.length == 0"> No steps yet...</p>
+        <p  v-if="coachingactivity.length > 0"> Stepcounter so far...</p>
         <ul>
           <li v-for="coaching in coachingactivity">
             {{coaching.steps}} for {{coaching.userId}} minutes
