@@ -29,6 +29,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/heartbeats">Heart Beat</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/stepcounter">Step Counter</a>
+            </li>
           </ul>
         </div>
       </nav>

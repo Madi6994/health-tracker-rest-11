@@ -49,6 +49,15 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">Step Counter</h5>
+          <div class="card-body">
+            <h5 class="card-title">{{coachingactivity.length}} coachingactivity</h5>
+            <a href="/stepcounter" class="btn btn-primary">More Details...</a>
+          </div>
+        </div>
+      </div>
     </div>
   </app-layout>
 </template>
@@ -62,7 +71,8 @@ Vue.component('home-page',
         activities: [],
         exerciseactivity: [],
         healthactivity: [],
-        heartactivity:[]
+        heartactivity:[],
+        coachingactivity:[]
       }),
       created() {
         axios.get("/api/users")
@@ -80,6 +90,9 @@ Vue.component('home-page',
         axios.get("/api/heartbeats")
             .then(res => this.heartactivity = res.data)
             .catch(() => alert("Error while fetching heartbeats"));
+        axios.get("/api/stepcounter")
+            .then(res => this.coachingactivity = res.data)
+            .catch(() => alert("Error while fetching stepcounter"));
       }
     });
 </script>

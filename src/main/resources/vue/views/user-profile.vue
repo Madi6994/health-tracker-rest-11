@@ -72,11 +72,20 @@
         </ul>
       </div>
       <div class="card-footer text-left">
-        <p  v-if="heartactivity.length == 0"> No exercises yet...</p>
-        <p  v-if="heartactivity.length > 0"> Exercises so far...</p>
+        <p  v-if="heartactivity.length == 0"> No heartrate yet...</p>
+        <p  v-if="heartactivity.length > 0"> HeartRate so far...</p>
         <ul>
           <li v-for="heart in heartactivity">
             {{heart.rate}} for {{heart.userId}} minutes
+          </li>
+        </ul>
+      </div>
+      <div class="card-footer text-left">
+        <p  v-if="coachingactivity.length == 0"> No exercises yet...</p>
+        <p  v-if="coachingactivity.length > 0"> Exercises so far...</p>
+        <ul>
+          <li v-for="coaching in coachingactivity">
+            {{coaching.steps}} for {{coaching.userId}} minutes
           </li>
         </ul>
       </div>
@@ -121,6 +130,11 @@ Vue.component("user-profile", {
         .catch(error => {
           console.log("No heartbeats added yet (this is ok): " + error)
         })
+    axios.get(url + `/stepcounter`)
+        .then(res => this.coachingactivity = res.data)
+        .catch(error => {
+          console.log("No stepcounter added yet (this is ok): " + error)
+        })
   },
   data: () => ({
     user: null,
@@ -128,7 +142,8 @@ Vue.component("user-profile", {
     activities: [],
     exerciseactivity: [],
     healthactivity: [],
-    heartactivity:[]
+    heartactivity:[],
+    coachingactivity:[]
   }),
   methods: {
     updateUser: function () {
