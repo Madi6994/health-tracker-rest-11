@@ -89,6 +89,15 @@
           </li>
         </ul>
       </div>
+      <div class="card-footer text-left">
+        <p  v-if="waterintakeactivity.length == 0"> No steps yet...</p>
+        <p  v-if="waterintakeactivity.length > 0"> Waterintake so far...</p>
+        <ul>
+          <li v-for="water in waterintakeactivity">
+            {{water.glass_of_water}} for {{water.datetime}} minutes
+          </li>
+        </ul>
+      </div>
     </div>
   </app-layout>
 </template>
@@ -135,6 +144,11 @@ Vue.component("user-profile", {
         .catch(error => {
           console.log("No stepcounter added yet (this is ok): " + error)
         })
+    axios.get(url + `/trackingwaterintake`)
+        .then(res => this.waterintakeactivity = res.data)
+        .catch(error => {
+          console.log("No trackingwaterintake added yet (this is ok): " + error)
+        })
   },
   data: () => ({
     user: null,
@@ -143,7 +157,8 @@ Vue.component("user-profile", {
     exerciseactivity: [],
     healthactivity: [],
     heartactivity:[],
-    coachingactivity:[]
+    coachingactivity:[],
+    waterintakeactivity:[]
   }),
   methods: {
     updateUser: function () {

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="GUI">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-stepcounter-overview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-takingwaterintake-overview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
@@ -201,21 +201,7 @@
       <workItem from="1672710518090" duration="511000" />
       <workItem from="1672711231991" duration="1338000" />
       <workItem from="1672856617735" duration="6000" />
-      <workItem from="1672876981769" duration="6721000" />
-    </task>
-    <task id="LOCAL-00009" summary="...">
-      <created>1672270904317</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1672270904317</updated>
-    </task>
-    <task id="LOCAL-00010" summary="...">
-      <created>1672271000955</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1672271000955</updated>
+      <workItem from="1672876981769" duration="7597000" />
     </task>
     <task id="LOCAL-00011" summary="...">
       <created>1672273570565</created>
@@ -546,7 +532,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672885607125</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="GUI">
+      <created>1672886637612</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1672886637612</updated>
+    </task>
+    <task id="LOCAL-00059" summary="GUI">
+      <created>1672886778311</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1672886778311</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

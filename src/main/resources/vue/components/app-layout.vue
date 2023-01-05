@@ -32,6 +32,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/stepcounter">Step Counter</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/trackingwaterintake">Water Intake</a>
+            </li>
           </ul>
         </div>
       </nav>
