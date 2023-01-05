@@ -21,7 +21,7 @@
               <a class="nav-link" href="/activities">Activities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/exercisegoals">Exercise_goal</a>
+              <a class="nav-link" href="/exercisegoals">Exercise goal</a>
             </li>
           </ul>
         </div>
