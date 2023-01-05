@@ -20,6 +20,15 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">Exercise Goals</h5>
+          <div class="card-body">
+            <h5 class="card-title">{{exercises.length}} exercises</h5>
+            <a href="/exercisegoals" class="btn btn-primary">More Details...</a>
+          </div>
+        </div>
+      </div>
     </div>
   </app-layout>
 </template>
@@ -39,6 +48,9 @@ Vue.component('home-page',
         axios.get("/api/activities")
             .then(res => this.activities = res.data)
             .catch(() => alert("Error while fetching activities"));
+        axios.get("/api/exercisegoals")
+            .then(res => this.exercises = res.data)
+            .catch(() => alert("Error while fetching exercisegoals"));
       }
     });
 </script>

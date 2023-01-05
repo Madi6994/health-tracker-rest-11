@@ -130,20 +130,6 @@ class JavalinConfig {
                     patch(HealthTrackerController::updateWaterById)
                 }
             }
-//            path("/api/stepcounter") {
-//                get(HealthTrackerController::)
-//                post(StepcounterController::addActivity)
-//                path("{activity-id}") {
-//                    get(StepcounterController::getActivitiesByActivityId)
-//                    delete(StepcounterController::deleteActivityByActivityId)
-//                    patch(StepcounterController::updateActivity)
-//                }
-//            }
-
-//            path("/api/heartbeat") {
-//                get(HealthTrackerController::getAllrates)
-//                post(HealthTrackerController::addHeartBeat)
-//            }
         }
     }
 

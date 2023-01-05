@@ -1,7 +1,6 @@
 package ie.setu.controllers
 
 import ie.setu.config.DbConfig
-import ie.setu.controllers.HealthTrackerController.deleteActivityByActivityId
 import ie.setu.domain.Activity
 import ie.setu.domain.User
 import ie.setu.domain.db.Activities
@@ -13,10 +12,12 @@ import kong.unirest.Unirest
 import org.joda.time.DateTime
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
-class AvtivityControllerTest {
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class ActivityControllerTest {
 
 
     private val db = DbConfig().getDbConnection()
@@ -42,14 +43,14 @@ class AvtivityControllerTest {
 
         @Test
         fun `deleting a Activity when it exists, returns a 204 response`() {
-        var id =1
+        var id =-1
             //Arrange - add the user that we plan to do a delete on
             val addedResponse = addActivity(activityid, activitydiscription, activityduration, activitycalories, activitydatetime,
                 activityuserid)
             val addedUser : Activity = jsonToObject(addedResponse.body.toString())
 
             //Act & Assert - delete the added user and assert a 204 is returned
-            assertEquals(204, deleteActivity(id).status)
+            assertEquals(204, deleteActivity(addedUser.id).status)
 
             //Act & Assert - attempt to retrieve the deleted user --> 404 response
             assertEquals(404, retrieveActivityById(id).status)

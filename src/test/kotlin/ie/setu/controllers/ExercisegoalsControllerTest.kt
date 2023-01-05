@@ -113,14 +113,14 @@ class ExercisegoalsControllerTest {
 
             //Arrange - add the user
             val addResponse = addExercise_goals(exerciseid, exercisecaloriestoburn, exercisesteps, exercisedatetime, exerciseuserid)
-            val addedUser : User = jsonToObject(addResponse.body.toString())
+            val addexercise : Exercise_goals = jsonToObject(addResponse.body.toString())
 
             //Assert - retrieve the added user from the database and verify return code
-            val retrieveResponse = retrieveExercise_goalsById(addedUser.id)
+            val retrieveResponse = retrieveExercise_goalsById(addexercise.id)
             assertEquals(200, retrieveResponse.status)
 
             //After - restore the db to previous state by deleting the added user
-            deleteExercise_goals(addedUser.id)
+            deleteExercise_goals(addexercise.id)
         }
 
 
@@ -149,7 +149,7 @@ class ExercisegoalsControllerTest {
 
     private fun addExercise_goals (id:Int, calories: Int, steps: Int, datetime: DateTime, userId: Int): HttpResponse<JsonNode> {
         return Unirest.post(origin + "/api/exercisegoals")
-            .body("{\"calories\":\"$calories\", \"steps\":\"$steps\",\"datetime\":\"$datetime\", \"userId\":\"$userId\" }")
+            .body("{\"id\":\"$id\",\"calories_to_burn\":\"$calories\", \"steps\":\"$steps\",\"date\":\"$datetime\", \"userId\":\"$userId\" }")
             .asJson()
     }
 
@@ -186,3 +186,4 @@ class ExercisegoalsControllerTest {
 
 
 }
+

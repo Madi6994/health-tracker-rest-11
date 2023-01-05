@@ -41,7 +41,6 @@ class ExercisegoalsDAO {
     fun save(exercisegoal: Exercise_goals) : Int?{
        return transaction {
             Exercise_goal.insert {
-                it[id] = exercisegoal.id
                 it[calories_to_burn] = exercisegoal.Calories_To_Burn
                 it[steps] = exercisegoal.Steps
                 it[date] = exercisegoal.Date

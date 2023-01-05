@@ -50,13 +50,13 @@ class HeartBeatControllerTest {
             val addedResponse = addHeartBeat(
                 heartbeatid, heartbeatrate, heartbeatuserid
             )
-//            val addedBeat : HeartBeat = jsonToObject(addedResponse.body.toString())
+            val addedBeat : HeartBeat = jsonToObject(addedResponse.body.toString())
 
             //Act & Assert - delete the added user and assert a 204 is returned
-            assertEquals(204, deleteHeartBeat(heartbeatid).status)
+            assertEquals(204, deleteHeartBeat(addedBeat.id).status)
 
             //Act & Assert - attempt to retrieve the deleted user --> 404 response
-            assertEquals(404, retrieveHeartBeatById(id).status)
+            assertEquals(404, retrieveHeartBeatById(addedBeat.id).status)
         }
 
         @Test
@@ -140,6 +140,8 @@ class HeartBeatControllerTest {
             val retrievedUser : User = jsonToObject(retrieveResponse.body.toString())
             deleteHeartBeat(retrievedUser.id)
         }
+
+
 
     }
 
