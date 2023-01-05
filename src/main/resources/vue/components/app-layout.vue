@@ -26,6 +26,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/healthcoaching">Health Coaching</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/heartbeats">Heart Beat</a>
+            </li>
           </ul>
         </div>
       </nav>

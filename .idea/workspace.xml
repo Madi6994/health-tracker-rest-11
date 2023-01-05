@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="GUI">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-heartbeat-overview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,14 +200,7 @@
       <workItem from="1672710518090" duration="511000" />
       <workItem from="1672711231991" duration="1338000" />
       <workItem from="1672856617735" duration="6000" />
-      <workItem from="1672876981769" duration="5167000" />
-    </task>
-    <task id="LOCAL-00007" summary="Lab06 - Before starting exercises">
-      <created>1655482251203</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1655482251203</updated>
+      <workItem from="1672876981769" duration="5691000" />
     </task>
     <task id="LOCAL-00008" summary="new Feature">
       <created>1672261562936</created>
@@ -542,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672885023076</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="GUI">
+      <created>1672885084299</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1672885084299</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

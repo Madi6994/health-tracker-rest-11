@@ -71,6 +71,15 @@
           </li>
         </ul>
       </div>
+      <div class="card-footer text-left">
+        <p  v-if="heartactivity.length == 0"> No exercises yet...</p>
+        <p  v-if="heartactivity.length > 0"> Exercises so far...</p>
+        <ul>
+          <li v-for="heart in heartactivity">
+            {{heart.rate}} for {{heart.userId}} minutes
+          </li>
+        </ul>
+      </div>
     </div>
   </app-layout>
 </template>
@@ -107,13 +116,19 @@ Vue.component("user-profile", {
         .catch(error => {
           console.log("No healthcoaching added yet (this is ok): " + error)
         })
+    axios.get(url + `/heartbeats`)
+        .then(res => this.heartactivity = res.data)
+        .catch(error => {
+          console.log("No heartbeats added yet (this is ok): " + error)
+        })
   },
   data: () => ({
     user: null,
     noUserFound: false,
     activities: [],
     exerciseactivity: [],
-    healthactivity: []
+    healthactivity: [],
+    heartactivity:[]
   }),
   methods: {
     updateUser: function () {
