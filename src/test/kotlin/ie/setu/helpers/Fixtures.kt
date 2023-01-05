@@ -70,12 +70,12 @@ val updatedcoachinguserid = 5
 //HeartBeat
 val nonExistingrate = 96
 
-val heartbeatid= 0
+val heartbeatid= 1
 val heartbeatrate= 98
 val heartbeatuserid = 4
 
 //update
-val updatedheartbeatid= 0
+val updatedheartbeatid= 2
 val updatedheartbeatrate= 102
 val updatedheartbeatuserid = 2
 

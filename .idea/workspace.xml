@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="GUI">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-takingwaterintake-overview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HeartBeatControllerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/HeartBeatControllerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +59,8 @@
       <recent name="ie.setu.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ActivityControllerTest">
-    <configuration name="ActivityControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HeartBeatControllerTest (5)">
+    <configuration name="HeartBeatControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker" />
       <extension name="coverage">
         <pattern>
@@ -71,29 +69,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.ActivityControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AvtivityControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="health-tracker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.controllers.AvtivityControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.AvtivityControllerTest$DeleteActivity" />
-      <option name="METHOD_NAME" value="deleting a Activity when it exists, returns a 204 response" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AvtivityControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeartBeatControllerTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker" />
       <extension name="coverage">
         <pattern>
@@ -102,13 +84,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.AvtivityControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeartBeatControllerTest$DeleteActivity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeartBeatControllerTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker" />
       <extension name="coverage">
         <pattern>
@@ -116,14 +98,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest$DeleteActivity" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeartBeatControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeartBeatControllerTest (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="health-tracker" />
       <extension name="coverage">
         <pattern>
@@ -131,10 +113,24 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest$DeleteActivity" />
-      <option name="METHOD_NAME" value="deleting a Activity when it exists, returns a 204 response" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeartBeatControllerTest (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="health-tracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HeartBeatControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ActivityControllerTest" />
-        <item itemvalue="JUnit.AvtivityControllerTest" />
-        <item itemvalue="JUnit.AvtivityControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" />
-        <item itemvalue="JUnit.HeartBeatControllerTest$DeleteActivity.deleting a Activity when it exists, returns a 204 response" />
-        <item itemvalue="JUnit.HeartBeatControllerTest$DeleteActivity" />
+        <item itemvalue="JUnit.HeartBeatControllerTest (5)" />
+        <item itemvalue="JUnit.HeartBeatControllerTest (4)" />
+        <item itemvalue="JUnit.HeartBeatControllerTest (3)" />
+        <item itemvalue="JUnit.HeartBeatControllerTest (2)" />
+        <item itemvalue="JUnit.HeartBeatControllerTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -201,14 +197,7 @@
       <workItem from="1672710518090" duration="511000" />
       <workItem from="1672711231991" duration="1338000" />
       <workItem from="1672856617735" duration="6000" />
-      <workItem from="1672876981769" duration="7597000" />
-    </task>
-    <task id="LOCAL-00011" summary="...">
-      <created>1672273570565</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1672273570565</updated>
+      <workItem from="1672876981769" duration="10207000" />
     </task>
     <task id="LOCAL-00012" summary="...">
       <created>1672274756229</created>
@@ -546,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672886778311</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="GUI">
+      <created>1672887514033</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1672887514033</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,42 +661,6 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ActivityControllerTest.kt</url>
-          <line>45</line>
-          <properties class="ie.setu.controllers.ActivityControllerTest.DeleteActivity" method="deleting a Activity when it exists, returns a 204 response">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ActivityControllerTest.kt</url>
-          <line>76</line>
-          <properties class="ie.setu.controllers.ActivityControllerTest.ReadUsers">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ActivityControllerTest.kt</url>
-          <line>89</line>
-          <properties class="ie.setu.controllers.ActivityControllerTest.ReadUsers">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ActivityControllerTest.kt</url>
-          <line>127</line>
-          <properties class="ie.setu.controllers.ActivityControllerTest.ReadUsers" method="getting a Activity by email when email exists, returns a 200 response">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ExercisegoalsControllerTest.kt</url>
           <line>111</line>
           <properties class="ie.setu.controllers.ExercisegoalsControllerTest.ReadUsers" method="getting a user by id when id exists, returns a 200 response">
@@ -726,16 +686,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ActivityControllerTest.kt</url>
-          <line>50</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/ActivityControllerTest.kt</url>
-          <line>53</line>
-          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/controllers/StepcounterControllerTest.kt</url>

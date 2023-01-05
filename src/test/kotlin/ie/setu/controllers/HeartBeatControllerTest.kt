@@ -115,7 +115,7 @@ class HeartBeatControllerTest {
 
             //Arrange - add the user
             val addResponse = addHeartBeat(heartbeatid, heartbeatrate, heartbeatuserid )
-            val addedUser : User = jsonToObject(addResponse.body.toString())
+            val addedUser : HeartBeat = jsonToObject(addResponse.body.toString())
 
             //Assert - retrieve the added user from the database and verify return code
             val retrieveResponse = retrieveHeartBeatById(addedUser.id)
@@ -176,7 +176,7 @@ class HeartBeatControllerTest {
         assertEquals(201, addResponse.status)
 
         //Assert - retrieve the added user from the database and verify return code
-        val retrieveResponse= retrieveHeartBeatById(stepcounterid)
+        val retrieveResponse= retrieveHeartBeatById(heartbeatid)
         assertEquals(200, retrieveResponse.status)
 
         //Assert - verify the contents of the retrieved user
