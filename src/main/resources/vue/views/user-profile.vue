@@ -62,6 +62,15 @@
           </li>
         </ul>
       </div>
+      <div class="card-footer text-left">
+        <p  v-if="healthactivity.length == 0"> No exercises yet...</p>
+        <p  v-if="healthactivity.length > 0"> Exercises so far...</p>
+        <ul>
+          <li v-for="health in healthactivity">
+            {{health.macro_percentage}} for {{health.protein_intake}} minutes
+          </li>
+        </ul>
+      </div>
     </div>
   </app-layout>
 </template>
