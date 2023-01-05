@@ -53,6 +53,15 @@
           </li>
         </ul>
       </div>
+      <div class="card-footer text-left">
+        <p  v-if="exerciseactivity.length == 0"> No exercises yet...</p>
+        <p  v-if="exerciseactivity.length > 0"> Exercises so far...</p>
+        <ul>
+          <li v-for="exercise in exerciseactivity">
+            {{exercise.calories_to_burn}} for {{exercise.date}} minutes
+          </li>
+        </ul>
+      </div>
     </div>
   </app-layout>
 </template>
@@ -80,7 +89,7 @@ Vue.component("user-profile", {
           console.log("No activities added yet (this is ok): " + error)
         })
     axios.get(url + `/exercisegoals`)
-        .then(res => this.exercises = res.data)
+        .then(res => this.exerciseactivity = res.data)
         .catch(error => {
           console.log("No exercises added yet (this is ok): " + error)
         })
@@ -89,7 +98,7 @@ Vue.component("user-profile", {
     user: null,
     noUserFound: false,
     activities: [],
-    exercises: [],
+    exerciseactivity: [],
   }),
   methods: {
     updateUser: function () {
