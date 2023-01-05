@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f273ce8-0ff5-4a89-9da5-aa88d9547c5c" name="Changes" comment="GUI">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-healthcoaching-overview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,14 +200,7 @@
       <workItem from="1672710518090" duration="511000" />
       <workItem from="1672711231991" duration="1338000" />
       <workItem from="1672856617735" duration="6000" />
-      <workItem from="1672876981769" duration="4053000" />
-    </task>
-    <task id="LOCAL-00003" summary="Lab05 - up to and including deployment">
-      <created>1655233257869</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1655233257869</updated>
+      <workItem from="1672876981769" duration="4842000" />
     </task>
     <task id="LOCAL-00004" summary="Lab05 - before starting exercises">
       <created>1655284228995</created>
@@ -543,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672883512000</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="GUI">
+      <created>1672883966162</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1672883966162</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

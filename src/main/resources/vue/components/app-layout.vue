@@ -23,6 +23,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/exercisegoals">Exercise goal</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/healthcoaching">Health Coaching</a>
+            </li>
           </ul>
         </div>
       </nav>

@@ -93,12 +93,18 @@ Vue.component("user-profile", {
         .catch(error => {
           console.log("No exercises added yet (this is ok): " + error)
         })
+    axios.get(url + `/healthcoaching`)
+        .then(res => this.healthactivity = res.data)
+        .catch(error => {
+          console.log("No healthcoaching added yet (this is ok): " + error)
+        })
   },
   data: () => ({
     user: null,
     noUserFound: false,
     activities: [],
     exerciseactivity: [],
+    healthactivity: []
   }),
   methods: {
     updateUser: function () {
